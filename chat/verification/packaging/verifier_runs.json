@@ -1,0 +1,101 @@
+[
+  {
+    "experiment": "01-gadget-compression",
+    "command": [
+      "python",
+      "verify.py"
+    ],
+    "status": "PASS",
+    "returncode": 0,
+    "elapsed_seconds": 1.481,
+    "log": "verification/packaging/01-gadget-compression--verify.log"
+  },
+  {
+    "experiment": "02-gap64",
+    "command": [
+      "python",
+      "verify.py"
+    ],
+    "status": "PASS",
+    "returncode": 0,
+    "elapsed_seconds": 5.031,
+    "log": "verification/packaging/02-gap64--verify.log"
+  },
+  {
+    "experiment": "02-gap64",
+    "command": [
+      "python",
+      "verify_structural.py"
+    ],
+    "status": "PASS",
+    "returncode": 0,
+    "elapsed_seconds": 0.718,
+    "log": "verification/packaging/02-gap64--verify_structural.log"
+  },
+  {
+    "experiment": "02-gap64",
+    "command": [
+      "python",
+      "verify_theta_dilation.py"
+    ],
+    "status": "PASS",
+    "returncode": 0,
+    "elapsed_seconds": 1.169,
+    "log": "verification/packaging/02-gap64--verify_theta_dilation.log"
+  },
+  {
+    "experiment": "03-phase-interfaces",
+    "command": [
+      "python",
+      "verify.py"
+    ],
+    "status": "PASS",
+    "returncode": 0,
+    "elapsed_seconds": 10.099,
+    "log": "verification/packaging/03-phase-interfaces--verify.log"
+  },
+  {
+    "experiment": "04-interface-filters",
+    "command": [
+      "python",
+      "verify_results.py"
+    ],
+    "status": "PASS",
+    "returncode": 0,
+    "elapsed_seconds": 9.006,
+    "log": "verification/packaging/04-interface-filters--verify_results.log"
+  },
+  {
+    "experiment": "04-interface-filters",
+    "command": [
+      "python",
+      "oracle_regression.py"
+    ],
+    "status": "PASS",
+    "returncode": 0,
+    "elapsed_seconds": 1.074,
+    "log": "verification/packaging/04-interface-filters--oracle_regression.log"
+  },
+  {
+    "experiment": "05-joint-synthesis",
+    "command": [
+      "python",
+      "verify.py"
+    ],
+    "status": "PASS",
+    "returncode": 0,
+    "elapsed_seconds": 14.455,
+    "log": "verification/packaging/05-joint-synthesis--verify.log"
+  },
+  {
+    "experiment": "05-joint-synthesis",
+    "command": [
+      "python",
+      "verify_learning.py"
+    ],
+    "status": "PASS",
+    "returncode": 0,
+    "elapsed_seconds": 12.952,
+    "log": "verification/packaging/05-joint-synthesis--verify_learning.log"
+  }
+]

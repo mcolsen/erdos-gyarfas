@@ -1,0 +1,4 @@
+/opt/pyvenv/lib/python3.13/site-packages/networkx/algorithms/graph_hashing.py:211: UserWarning: The hashes produced for graphs without node or edge attributes changed in v3.5 due to a bugfix (see documentation).
+  node_labels = _init_node_labels(G, edge_attr, node_attr)
+girth7 insertions 2 classes 1
+0 cycles 138 The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None) obj None

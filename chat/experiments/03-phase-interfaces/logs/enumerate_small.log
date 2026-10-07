@@ -1,0 +1,49 @@
+b2_0 k 3 safe 0
+b2_0 k 4 safe 1
+b2_0 k 5 safe 2
+b2_0 k 6 safe 2
+b2_0 k 7 safe 2
+TRIED b2_0 110 7
+b4_0 k 3 safe 1
+b4_0 k 4 safe 1
+b4_0 k 5 safe 1
+b4_0 k 6 safe 3
+b4_0 k 7 safe 10
+TRIED b4_0 1688 16
+b4_1 k 3 safe 1
+b4_1 k 4 safe 1
+b4_1 k 5 safe 1
+b4_1 k 6 safe 4
+b4_1 k 7 safe 7
+TRIED b4_1 1688 14
+b6_0 k 3 safe 0
+b6_0 k 4 safe 0
+b6_0 k 5 safe 3
+b6_0 k 6 safe 11
+b6_0 k 7 safe 23
+TRIED b6_0 11385 37
+b6_1 k 3 safe 0
+b6_1 k 4 safe 0
+b6_1 k 5 safe 0
+b6_1 k 6 safe 3
+b6_1 k 7 safe 11
+TRIED b6_1 11385 14
+b6_2 k 3 safe 0
+b6_2 k 4 safe 0
+b6_2 k 5 safe 3
+b6_2 k 6 safe 9
+b6_2 k 7 safe 41
+TRIED b6_2 11385 53
+b6_3 k 3 safe 0
+b6_3 k 4 safe 0
+b6_3 k 5 safe 0
+b6_3 k 6 safe 3
+b6_3 k 7 safe 2
+TRIED b6_3 11385 5
+b6_4 k 3 safe 0
+b6_4 k 4 safe 1
+b6_4 k 5 safe 0
+b6_4 k 6 safe 10
+b6_4 k 7 safe 20
+TRIED b6_4 11385 31
+TOTAL 181

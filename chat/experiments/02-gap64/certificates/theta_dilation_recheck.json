@@ -1,0 +1,44 @@
+{
+  "supports": {
+    "A": [
+      1,
+      4,
+      5
+    ],
+    "B": [
+      2,
+      4,
+      5
+    ],
+    "C": [
+      2,
+      3,
+      5,
+      6
+    ],
+    "D": [
+      3,
+      4,
+      6
+    ],
+    "E": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ]
+  },
+  "checked_ordered_sequences_r3_to_r8": 87360,
+  "safe_internal_edges": [
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      3
+    ]
+  ],
+  "proof": "For every r>=3 and every sequence of transit types, choose lengths summing to3r using pairs/triples of A/B and corrections with C/D/E. Add r intercell edges to obtain4r."
+}

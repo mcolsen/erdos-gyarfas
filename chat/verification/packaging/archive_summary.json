@@ -1,0 +1,13 @@
+{
+  "topic_notes": 29,
+  "findings": 40,
+  "central_graph_files": 21,
+  "original_experiment_bundles": 5,
+  "original_experiment_members_preserved_byte_for_byte": 317,
+  "original_mounted_inputs_accounted_for": 37,
+  "verification_programs_passed": 9,
+  "relative_markdown_links_checked": 195,
+  "python_sources_parsed": 46,
+  "credential_pattern_matches": [],
+  "date": "2026-10-06"
+}

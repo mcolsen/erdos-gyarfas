@@ -1,0 +1,15 @@
+{
+  "status": "UNKNOWN",
+  "rounds": 1194,
+  "clauses": 5971,
+  "seconds": 12.005473136901855,
+  "best_c16_upper_cap": 49,
+  "cycle_clauses_by_length": {
+    "4": 198,
+    "8": 5688,
+    "16": 881
+  },
+  "oracle_nodes": 653184,
+  "universal_topology_clauses": 457,
+  "decision_diagram_nodes": 32674
+}

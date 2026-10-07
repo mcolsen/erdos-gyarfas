@@ -1,0 +1,628 @@
+% ============================================================================
+% Computational and structural bounds for the Erdos--Gyarfas conjecture
+% Archived draft mathematical note. Compile: pdflatex x2.
+%
+% Archival bibliographic limitations: the prize/status and independent
+% forum-observation date were recorded in campaign notes, not independently
+% checked against the live site. The P8/P10 references are abbreviated.
+% Computational status is frozen through the independently verified n=48 rung.
+% ============================================================================
+\documentclass[11pt]{article}
+
+\usepackage[margin=1.1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\EG}{Erd\H{o}s--Gy\'arf\'as}
+\newcommand{\repourl}{\url{https://github.com/mcolsen/erdos-gyarfas}}
+\newcommand{\Cyc}[1]{C_{#1}}
+
+\title{Computational and structural bounds for the\\ \EG{} conjecture}
+\author{Maria Olsen}
+\date{August 8, 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+The \EG{} conjecture asserts that every graph with minimum degree at least~$3$
+contains a cycle whose length is a power of two. We report a computational
+campaign against the conjecture, using independent software stacks or runs
+where feasible and count-exact nonzero controls otherwise. Main
+results: (i)~by isomorph-free exhaustive generation, \emph{every} graph with
+$\delta \ge 3$ on $n \le 21$ vertices contains a cycle of length $4$, $8$,
+or~$16$ (the $n=21$ order was enumerated twice, via two complete
+res/mod partitions, $\approx 900$ CPU-hours total); (ii)~by SAT with
+isomorph-free model enumeration, there is no counterexample on $n \le 32$
+vertices, and, adding sound structural constraints on a minimum-order
+counterexample, any counterexample requires \textbf{at least $36$ vertices};
+(iii)~any \emph{cubic} counterexample requires at least $50$ vertices, and any
+\emph{bipartite} counterexample at least $57$; (iv)~at least $2/3$ of the
+vertices of a minimal counterexample have degree exactly~$3$, strengthening
+the recent $4/7$ bound of Carr, and every $\Cyc4$-free graph with
+$\delta \ge 3$ satisfies $\Delta \le \lfloor (n-1)/2 \rfloor$; (v)~all
+$3{,}815$ cubic arc-transitive graphs on at most $10{,}000$ vertices and all
+$111{,}360$ cubic vertex-transitive graphs on at most $1{,}280$ vertices
+satisfy the conjecture; (vi)~the smallest cubic graph avoiding
+$\{\Cyc4,\Cyc8,\Cyc{16}\}$ has between $50$ and $82$ vertices; (vii)~a
+Moore-type bound: a cubic graph whose non-backtracking transfer matrix
+satisfies $\operatorname{tr}(H^L)=0$ has at least $\approx 2^{L/2-1}$
+vertices, which rules out entire families of algebraic constructions at small
+order. We close with a first-moment analysis explaining \emph{why} the
+conjecture resists counterexamples --- the expected number of $\Cyc L$'s in a
+cubic-like graph grows doubly exponentially in the index of $L$ --- and a
+precise characterization of the only kind of object that could still refute
+it. Source, compact execution records, and graph artifacts are archived at
+\repourl.
+\end{abstract}
+
+\section{Introduction}
+
+Erd\H{o}s and Gy\'arf\'as conjectured in the mid-1990s that every graph of
+minimum degree at least three contains a simple cycle whose length is a power
+of two~\cite{EG95}. Erd\H{o}s offered \$100 for a proof and \$50 for a
+counterexample, and reportedly considered the conjecture likely to be
+\emph{false}; it is problem~\#64 on \texttt{erdosproblems.com}, where a
+\$1000 prize was recorded in the campaign notes.
+% The prize/status line was not independently checked against the live site.
+
+The conjecture is known to hold for several restricted classes: planar
+claw-free graphs (Daniel--Shauger~\cite{DS01}), $3$-connected cubic planar
+graphs (Heckman--Krakovski~\cite{HK13}), $K_{1,m}$-free graphs with minimum
+degree $m{+}1$ or maximum degree $2m{-}1$~\cite{Shauger98}, and graphs with
+no long induced path ($P_8$-free~\cite{P8free}, $P_{10}$-free~\cite{P10free}).
+In a different direction, the cycle-length machinery of Liu and
+Montgomery~\cite{LM23} implies that graphs of sufficiently large average
+degree contain cycles of every even length in a long interval, hence in
+particular a power-of-two cycle; the conjecture is thus ``only'' open in the
+sparse regime it was designed for. On the computational side the record
+stood, until recently, at exhaustive verification for all graphs on roughly
+$15$--$16$ vertices (attributed to Royle, c.~2004) and for cubic graphs on
+fewer than $30$ vertices (Markstr\"om~\cite{Markstrom04}). In 2026 two
+unrefereed contributions appeared: an SMS-based SAT frontier claiming no
+counterexample on $n \le 31$ vertices (Balaji~\cite{Balaji26}), and a short
+structural paper of Carr~\cite{Carr26} showing every minimal counterexample
+is ``predominantly cubic.'' Part of the present campaign was an independent
+adjudication of both; both are sound (Section~\ref{sec:sat}), and Carr's
+bound can be strengthened (Section~\ref{sec:structural}).
+
+\subsection{Results}
+
+Throughout, a \emph{counterexample} is a graph $G$ with $\delta(G)\ge 3$
+containing no cycle whose length is a power of two (equivalently, of length
+$2^k$ for some $k \ge 2$). A \emph{minimal}
+counterexample is one of minimum order, and of minimum size among those of
+minimum order.
+
+\begin{enumerate}
+\item \textbf{Exhaustive frontier (no SAT in the loop).} By isomorph-free
+exhaustive generation (\texttt{geng} with a custom pruning plugin), there are
+exactly $0$ graphs with $\delta \ge 3$ avoiding $\{\Cyc4, \Cyc8, \Cyc{16}\}$
+at \emph{every} order $n = 4, \dots, 21$. Since $32 > 21$, this verifies the
+conjecture on $n \le 21$ outright. The last order was enumerated twice, by
+two complete and independently sliced work partitions in exact agreement
+(Section~\ref{sec:enum}).
+\item \textbf{SAT frontier.} Independently of (1), SAT-with-symmetries
+enumeration proves there is no counterexample on $n \le 32$ vertices,
+assumption-free. On top of this base, sound minimum-order structural
+constraints (Section~\ref{sec:structural}) extend the bound: \emph{any
+counterexample has at least $36$ vertices}. Any cubic counterexample has at
+least $50$ vertices; any bipartite counterexample at least $57$
+(Section~\ref{sec:sat}).
+\item \textbf{Structural bounds.} At least $2/3$ of the vertices of a
+minimal counterexample are cubic (Theorem~\ref{thm:twothirds}, strengthening
+Carr's $4/7$); and every $\Cyc4$-free graph with $\delta\ge3$ has
+$\Delta \le \lfloor (n-1)/2\rfloor$ (Theorem~\ref{thm:degcap} --- no
+minimality needed, so it prunes \emph{every} counterexample search).
+\item \textbf{Symmetric censuses are clean.} All $3{,}815$ cubic
+arc-transitive graphs on $\le 10{,}000$ vertices (Conder census) and all
+$111{,}360$ cubic vertex-transitive graphs on $\le 1{,}280$ vertices
+(Poto\v{c}nik--Spiga--Verret census) satisfy the conjecture. The interesting
+part is \emph{how}: $689$ resp.\ $100$ of them avoid
+$\{\Cyc4,\Cyc8,\Cyc{16}\}$ entirely --- yet every single one contains
+$\Cyc{32}$ (Section~\ref{sec:census}).
+\item \textbf{A new extremal question, bracketed.} The smallest cubic graph
+with no $\Cyc4$, $\Cyc8$, or $\Cyc{16}$ has between $50$ and $82$ vertices
+(Section~\ref{sec:window}); eleven verified specimens at $n = 82$--$126$ are
+archived.
+\item \textbf{A Moore-type obstruction for algebraic constructions.} If a
+connected cubic graph has $\operatorname{tr}(H^L) = 0$ for the Hashimoto
+(non-backtracking) matrix $H$ and even $L$, then
+$n \ge (s+1)^2/(2s-1)$ with $s = 2^{L/2}$ (Section~\ref{sec:outlook});
+certifying $\Cyc{64}$-freeness by walk cancellation therefore needs
+$n > 2.1\times 10^9$. This kills, at realistic orders, the most natural
+family of algebraic constructions (voltage lifts certified through twisted
+spectra).
+\item \textbf{A margin heuristic and a target profile.} The expected number
+of $L$-cycles in a cubic-like graph is $\approx 2^L/(2L)$ --- doubly
+exponential in $k$ where $L = 2^k$. Everywhere we could measure, observed
+behavior tracked this formula, and \emph{spectral holes occurred only at
+lengths where the expected count is small}. Any counterexample must be a
+highly structured algebraic object with engineered holes at two or more
+consecutive large powers of two against millions of expected cycles ---
+an object nobody currently knows how to build (Section~\ref{sec:outlook}).
+\end{enumerate}
+
+\subsection{Methodology: adversarial cross-validation}
+\label{sec:method}
+
+Computer-search claims of the form ``zero objects exist'' are only as strong
+as their weakest unverified component. The campaign's standing rule was that
+every headline zero must be reproduced by two \emph{disjoint} stacks --- or,
+where cost forbade that, that every ingredient of the single stack be
+validated count-exactly against an independent implementation on nonzero
+instances. Concretely: the \texttt{nauty}/\texttt{geng} stack (C, canonical
+augmentation) and the SMS stack (SAT + minimal-model symmetry breaking +
+subgraph-isomorphism propagator) were run against each other on five
+count-exact gates (agreeing at $2590$, $5$, $1315$, $0$, and $88$ models;
+Section~\ref{sec:sat}); the exact cycle checker was validated against an
+algorithmically independent brute force on all $13{,}591$ graphs with
+$n \le 8$ and against published spectra of named graphs; and the enumeration
+reproduced Markstr\"om's published counts ($4$ and $23$ cubic
+$\{\Cyc4,\Cyc8\}$-free graphs at $n = 24, 26$) before being trusted at new
+orders. One coverage error in an early census sweep was caught by exactly
+this discipline and is documented in the repository (the corrected census
+results are those stated in Section~\ref{sec:census}).
+
+\section{Structural results}
+\label{sec:structural}
+
+Following Carr~\cite{Carr26}, whose short proofs we verified independently
+and reuse, let $G$ be a minimal counterexample (minimum order, then minimum
+size). Write $V_3$ for its set of degree-$3$ vertices and $V_{\ge4}$ for the
+rest.
+
+\begin{lemma}[{Carr~\cite{Carr26}}]\label{lem:proper}
+Every proper subgraph $H \subsetneq G$ has $\delta(H) \le 2$.
+\end{lemma}
+
+\begin{proof}
+$H$ precedes $G$ in the (order, size) lexicographic order; if
+$\delta(H)\ge3$, minimality forces a power-of-two cycle in $H \subseteq G$.
+\end{proof}
+
+\begin{corollary}[{Carr~\cite{Carr26}}]\label{cor:cubicneighbor}
+Every vertex of $G$ is adjacent to a vertex of degree exactly $3$.
+\end{corollary}
+
+\begin{proof}
+$G - v$ is proper, so some $u$ has $\deg_{G-v}(u)\le 2$; since
+$\deg_G(u)\ge3$, $u$ lost an edge to $v$ and $\deg_G(u)=3$.
+\end{proof}
+
+\begin{corollary}[{Markstr\"om~\cite{Markstrom04}}]\label{cor:indep}
+$V_{\ge4}$ is an independent set.
+\end{corollary}
+
+\begin{proof}
+Deleting an edge between two vertices of degree $\ge4$ leaves a proper
+subgraph with $\delta\ge3$, contradicting Lemma~\ref{lem:proper}.
+\end{proof}
+
+Carr combines these into: at least $4/7$ of the vertices are cubic. His own
+two corollaries give more in one line.
+
+\begin{theorem}\label{thm:twothirds}
+In a minimal counterexample, $|V_3| \ge \tfrac{2}{3}\,|V(G)|$.
+\end{theorem}
+
+\begin{proof}
+By Corollary~\ref{cor:cubicneighbor} applied to the members of $V_3$, every
+cubic vertex has at least one cubic neighbor, so each $v \in V_3$ sends at
+most $2$ of its $3$ edges to $V_{\ge4}$. By Corollary~\ref{cor:indep}, all
+edges at $V_{\ge4}$ land in $V_3$. Counting the edges between the two sides:
+\[
+4\,|V_{\ge4}| \;\le\; e(V_3, V_{\ge4}) \;\le\; 2\,|V_3|
+\quad\Longrightarrow\quad
+|V_{\ge4}| \le \tfrac{1}{2}|V_3|
+\quad\Longrightarrow\quad
+|V_3| \ge \tfrac{2}{3}|V(G)|. \qedhere
+\]
+\end{proof}
+
+\begin{remark}
+Equality would force every $V_{\ge4}$-vertex to have degree exactly $4$,
+and $V_3$ to induce a perfect matching with each cubic vertex sending
+exactly two edges to $V_{\ge4}$.
+The same bound was observed independently, and essentially simultaneously,
+in a forum post by user \emph{jul059} on \texttt{erdosproblems.com}
+(26~July 2026); the proof above was recorded in this project's repository on
+24~July 2026. % Forum attribution/date retained from the campaign record.
+\end{remark}
+
+The second structural bound requires no minimality at all --- only
+$\Cyc4$-freeness, which every counterexample has since $4 = 2^2$. It is what
+makes exhaustive generation feasible at orders around $20$
+(Section~\ref{sec:enum}).
+
+\begin{theorem}\label{thm:degcap}
+If $G$ is $\Cyc4$-free with $\delta(G) \ge 3$ and $n$ vertices, then for
+every vertex $v$,
+\[
+\sum_{u \in N(v)} \bigl(\deg(u) - 1\bigr) \;\le\; n - 1,
+\]
+and consequently $\Delta(G) \le \lfloor (n-1)/2 \rfloor$.
+\end{theorem}
+
+\begin{proof}
+Fix $v$. The sets $N(u)\setminus\{v\}$ for $u \in N(v)$ are pairwise
+disjoint: a common element $w$ of two of them would close a $4$-cycle
+$v u_1 w u_2$. They avoid nothing else, so their total size,
+$\sum_{u\in N(v)}(\deg(u)-1)$, is at most $|V(G)\setminus\{v\}| = n-1$.
+For the consequence, take $v$ of maximum degree $\Delta$: since every
+$u \in N(v)$ has $\deg(u) \ge 3$, each of the $\Delta$ terms is at least
+$2$, so $2\Delta \le n-1$.
+\end{proof}
+
+\section{Exhaustive generation: no counterexample on $n \le 21$ vertices}
+\label{sec:enum}
+
+The generator is McKay's \texttt{geng}~\cite{nauty} with minimum degree $3$,
+maximum degree $\lfloor (n-1)/2 \rfloor$ (sound by
+Theorem~\ref{thm:degcap}), the built-in square-free filter (\texttt{-f},
+sound since $\Cyc4$ is itself a forbidden cycle), and a custom
+\texttt{PRUNE} plugin rejecting any partial graph containing a $\Cyc8$ or
+$\Cyc{16}$ through the newest vertex. The plugin is inductively exact: in
+canonical augmentation each graph is built by successive vertex additions,
+and any forbidden cycle in the final graph passes through the
+highest-indexed vertex it contains at the moment that vertex was added ---
+so it is detected at that step, and each isomorph-free branch is pruned at
+the earliest opportunity and never wrongly. The plugin reproduced
+Markstr\"om's published Table (the $4$ and $23$ cubic $\{\Cyc4,\Cyc8\}$-free
+graphs at $n=24,26$, each of which we verified contains a $\Cyc{16}$) before
+any new claim was made with it.
+
+\textbf{Result.} There are exactly $0$ graphs with $\delta\ge3$ avoiding
+$\{\Cyc4,\Cyc8,\Cyc{16}\}$ at every order $n = 4,\dots,21$. Every graph with
+minimum degree at least $3$ on at most $21$ vertices therefore contains a
+cycle of length $4$, $8$, or $16$. This extends the historical
+pure-enumeration record ($\approx 15$--$16$ vertices) by five to six orders,
+with no SAT solver in the loop.
+
+The final order $n=21$ was distributed with \texttt{geng}'s res/mod
+splitting and completed \emph{twice}: once as a complete $256$-class
+partition ($509$ CPU-h) and once as a complete $16$-class partition ($389$
+CPU-h), sliced along different tree boundaries, run on different days, in
+exact agreement (zero survivors in every class of both partitions).
+
+\begin{remark}[A soundness warning on res/mod splitting]\label{rem:resmod}
+It is tempting to refine a slow class $i \pmod m$ into the classes
+$i + km \pmod{4m}$ of a finer run. This is \emph{unsound} for
+\texttt{geng}: the level at which the generation tree is split is adjusted
+dynamically by a threshold proportional to \texttt{mod} itself
+(\texttt{multiplicity} $= 50\cdot$\texttt{mod} in \texttt{geng.c}), so runs
+with different moduli can split at different tree levels, and classes of
+different moduli need not be compatible --- the union above can both miss
+and double-count work. Any \emph{single} modulus, run over all its residues
+with identical options, partitions the tree exactly (all such runs share
+identical traversal state above the split level). Our two certifications
+are each pure single-modulus partitions; we observed empirically that
+matching residue classes across moduli mis-align badly (per-class workloads
+differing by factors of $0.16$ to $2.2$), so the warning is not
+theoretical.
+\end{remark}
+
+\section{SAT frontiers: general $\ge 36$, cubic $\ge 50$, bipartite $\ge 57$}
+\label{sec:sat}
+
+The SAT stack is SAT Modulo Symmetries (SMS) of Kirchweger and
+Szeider~\cite{SMS}, which enumerates isomorph-free models under a
+lex-minimality symmetry break, with the Glasgow subgraph
+solver~\cite{Glasgow} as a forbidden-subgraph propagator (forbidding the
+cycles $\Cyc4$, $\Cyc8$, $\Cyc{16}$, and where relevant $\Cyc{32}$, as
+non-induced subgraphs). We first audited the 2026 frontier claim of
+Balaji~\cite{Balaji26} ($n \le 31$): the encoding-level design is sound
+(blocking clauses, symmetry breaking, and relaxation direction all verified
+by code review), its published test gates pass, and we replicated the entire
+frontier $n = 17$--$31$ (all UNSAT) on our hardware. Since the stack's
+correctness cannot rest on proof logging (the propagator's clauses are not
+RUP-derivable), we validated it count-exactly against the independent
+\texttt{geng} stack of Section~\ref{sec:enum} on five gates:
+
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+instance & \texttt{geng} count & SMS count & agree \\
+\midrule
+$n=8$, $\delta\ge3$, nothing forbidden & 2590 & 2590 & \checkmark \\
+$n=10$, forbid $\Cyc4$ & 5 & 5 & \checkmark \\
+$n=10$, forbid $\Cyc8$ & 1315 & 1315 & \checkmark \\
+$n=12$, forbid $\{\Cyc4,\Cyc8\}$ & 0 & 0 & \checkmark \\
+$n=16$, forbid $\{\Cyc4,\Cyc{16}\}$ & 88 & 88 & \checkmark \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\textbf{Assumption-free base.} SMS proves there are zero
+$\{\Cyc4,\Cyc8,\Cyc{16}\}$-free graphs with $\delta \ge 3$ at $n = 32$
+(5.5\,h) --- the first order at which a $\Cyc{32}$ could exist, and it is
+not even needed. Combined with $n \le 31$: \emph{no counterexample exists on
+at most $32$ vertices, with no structural assumptions.}
+
+\textbf{Structural extension to $\ge 36$.} For $n = 33, 34, 35$ we add the
+constraints of Section~\ref{sec:structural}, all sound for a
+\emph{minimum-order} counterexample: $V_{\ge4}$ independent
+(Corollary~\ref{cor:indep}), every vertex adjacent to a cubic vertex
+(Corollary~\ref{cor:cubicneighbor}), $|V_{\ge4}| \le n/3$
+(Theorem~\ref{thm:twothirds}), and the degree cap
+(Theorem~\ref{thm:degcap}). The chaining argument: if any counterexample
+existed on $\le 35$ vertices, the global minimum-order one would live at
+some order $\le 35$ and satisfy all constraints; orders $\le 32$ are
+excluded unconditionally, and the constrained searches at $33, 34, 35$
+(5\,h, 10.5\,h, 22\,h) are UNSAT. Hence \textbf{any counterexample has at
+least $36$ vertices}. (The encoding was validated by re-running orders with
+known nonzero unconstrained counts and checking the constrained counts
+against \texttt{geng} filters.)
+
+\textbf{Cubic.} For cubic graphs the SMS ladder is assumption-free at each
+even order, and gives zero $\{\Cyc4,\Cyc8,\Cyc{16}\}$-free cubic graphs at
+$n = 32, 34, \dots, 48$ (5m52s at $32$ growing to a 146-hour monolith at
+$48$). The n=48 zero was separately reproduced by a complete recursive
+cube partition after the cubing pipeline matched Markstr\"om's positive
+n=28 count exactly at three granularities. With Markstr\"om's $n < 30$,
+parity, and the general result $\le 32$: \textbf{any cubic counterexample has
+at least $50$ vertices}.
+
+\textbf{Bipartite.} Adding a $2$-coloring to the encoding (sound within the
+class), zero bipartite $\{\Cyc4,\Cyc8,\Cyc{16}\}$-free graphs with
+$\delta\ge3$ exist at every $n = 33, \dots, 56$: \textbf{any bipartite
+counterexample has at least $57$ vertices}.
+
+\section{Symmetric censuses and structured families}
+\label{sec:census}
+
+Exhaustion is hopeless much past $n \approx 45$, but a counterexample, if
+one exists, is plausibly a highly symmetric object (Section~\ref{sec:outlook}
+makes this precise). We therefore swept every available census and several
+parametric families with the exact cycle checkers:
+
+\begin{center}
+\begin{tabular}{lrrl}
+\toprule
+family & tested & $\{\Cyc4,\Cyc8,\Cyc{16}\}$-free & fate of survivors \\
+\midrule
+Generalized Petersen $GP(n,k)$, $2n\le64$ & 240 & 0 & --- \\
+$I$-graphs $I(n,j,k)$, $2n\le64$ & 1{,}148 & 0 & --- \\
+Circulants, $n\le64$, degree 4--6 & 80{,}780 & 0 & --- \\
+Cyclic lifts of $\theta, K_4, K_{3,3}, Q_3$, Petersen; $n\le64$ & 176{,}348 & 0 & --- \\
+Conder arc-transitive census, $n\le10{,}000$ & 3{,}815 & 689 & all contain $\Cyc{32}$, $\Cyc{64}$, $\Cyc{128}$ \\
+PSV vertex-transitive census, $n\le1{,}280$ & 111{,}360 & 100 & all contain $\Cyc{32}$, $\Cyc{64}$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Both censuses~\cite{Conder,PSV13} are \emph{clean}: the conjecture holds for
+every cubic arc-transitive graph on at most $10{,}000$ vertices and every
+cubic vertex-transitive graph on at most $1{,}280$. ($\Cyc{16}$-freeness
+decisions were triple-engined --- exact DFS, non-backtracking dart search,
+and Glasgow --- with zero disagreements; every claimed long cycle has an
+explicitly verified witness.)
+
+The survivors of the $\{\Cyc4,\Cyc8,\Cyc{16}\}$ pass are extremal objects of
+independent interest. Three deserve mention:
+\begin{itemize}
+\item \textbf{C2030.1} ($n=2030$, girth $7$, non-bipartite; the skeleton of
+a non-orientable $\{7,3\}$ map of $\mathrm{PSL}(2,29)$): it contains
+$7$-cycles yet no $\Cyc8$ or $\Cyc{16}$ --- spectral holes without high
+girth, at lengths where a random cubic graph would carry ${\sim}16$ and
+${\sim}2000$ cycles. Notably its non-backtracking walk count at length
+$16$ is $194{,}880 \ne 0$: the hole exists at the \emph{cycle} level while
+being invisible at the \emph{walk} level.
+\item \textbf{C1458.10/11} ($n=1458$, girth $12$, bipartite): even-cycle
+spectra skipping $16$, and here the walk count vanishes too --- a genuinely
+representation-theoretic cancellation.
+\item \textbf{The smallest survivors}: C1050.1 ($n=1050$, girth $12$) in
+the arc-transitive census, and an $n=180$, girth-$3$ (!) graph in the
+vertex-transitive census --- sixty triangles and then no cycle of any
+length in $\{4,\dots,11\}$.
+\end{itemize}
+Every one of the census survivors contains a $\Cyc{32}$, typically
+found by the Glasgow solver in tens of milliseconds: the symmetry that
+engineers the short holes \emph{spreads} the long cycles.
+
+\section{Stochastic search, an extremal bracket, and the $[65,127]$ window}
+\label{sec:window}
+
+\textbf{Simulated annealing.} Over cubic graphs with energy
+$10\,\#\Cyc4 + 5\,\#\Cyc8 + \#\Cyc{16}$ (exact counts per move; an exact
+$\Cyc{32}$ gate on any zero-energy state), no chain among $30+$ across three
+move strategies and ${\sim}1.5$ billion total moves ever reached energy $0$
+at any $n \in [34,62]$: best energies floor at $13$--$25$, essentially
+independent of $n$ and strategy. The conjecture's difficulty is not an
+artifact of exhaustive methods; even aggressive local search cannot
+approach a counterexample in this range.
+
+\textbf{The bracket.} At $n \ge 82$ the picture inverts:
+$\{\Cyc4,\Cyc8,\Cyc{16}\}$-free cubic graphs are \emph{easy} to find
+(annealing succeeds in minutes at $n = 82, 90, 94, 96, 112, 120, 126$;
+eleven specimens re-verified by an independent checker are archived). With
+the SMS ladder zero through $48$: \emph{the smallest cubic graph avoiding
+$\{\Cyc4, \Cyc8, \Cyc{16}\}$ has between $50$ and $82$ vertices.} Repeated
+annealing probes at $n = 66$--$80$ all failed while succeeding instantly at
+$82$, hinting the true threshold sits near the top of the bracket.
+
+\textbf{The $[65,127]$ window.} In this window a counterexample must avoid
+five lengths $\{4,8,16,32,64\}$. The specimens above show the first three
+exclusions are cheap here --- but every specimen carries at least $10^5$
+thirty-two-cycles, and girth $>32$ requires $n \gtrsim 1.3\times10^5$ by the
+Moore bound, far beyond the window. A counterexample here would need
+engineered spectral holes at $32$ \emph{and} $64$ simultaneously against
+$10^5$-plus expected cycles of each length --- outside the reach of any
+local or exhaustive methods used in this campaign. This is a heuristic
+assessment, not an exhaustion of the window.
+
+\section{Margin analysis, an algebraic obstruction, and limitations}
+\label{sec:outlook}
+
+\textbf{Why the conjecture keeps winning.} The expected number of $L$-cycles
+in a random cubic-like graph is ${\sim}2^L/(2L)$: avoiding $\Cyc8$ means
+dodging ${\sim}16$ expected cycles; $\Cyc{16}$, ${\sim}2\times10^3$;
+$\Cyc{32}$, ${\sim}7\times10^7$; $\Cyc{64}$, ${\sim}10^{17}$. As $n$ grows
+the forbidden lengths thin out (the reason Erd\H{o}s doubted the
+conjecture), but each forbidden length gets \emph{doubly exponentially}
+fatter --- and in every experiment above, the second effect won: the
+$\{\Cyc4,\Cyc8\}$-free cubic counts explode ($4 \to 23 \to 251$ at
+$n=24,26,28$) while adding the $\Cyc{16}$ exclusion flattens them to zero
+through $48$; annealing floors at a persistent residue of $\Cyc{16}$'s; in
+the window, the wall simply moves to $\Cyc{32}$, exactly on schedule. And
+across two full censuses, holes appeared only at lengths where the expected
+count is small ($8$ and $16$), never at $32$ or beyond.
+
+A first-moment heuristic therefore predicts no counterexample at any order
+--- and the known escape from such heuristics is algebraic rigidity, the
+loophole through which Moore graphs and cages exist. If the conjecture is
+false, the witness is a highly structured object with spectral holes at
+consecutive large powers of two. One general mechanism for building such
+holes is a voltage lift certified through twisted non-backtracking spectra
+(no identity-voltage non-backtracking closed $L$-walk in the base $\Rightarrow$
+no $\Cyc L$ in the lift). The campaign's companion theoretical result
+bounds this entire strategy:
+
+\begin{theorem}[trace-hole Moore bound; proof in the repository notes]
+\label{thm:tracemoore}
+Let $G$ be a connected cubic multigraph on $n$ vertices, $H$ its Hashimoto
+(non-backtracking) matrix, $L \ge 2$ even, $s = 2^{L/2}$. If
+$\operatorname{tr}(H^L) = 0$ then
+\[
+n \;\ge\; \frac{(s+1)^2}{2s-1} \;\approx\; 2^{L/2-1},
+\]
+and twice that if $G$ is bipartite. In particular
+$\operatorname{tr}(H^{16})=0$ forces $n \ge 130$,
+$\operatorname{tr}(H^{32})=0$ forces $n \ge 32{,}770$, and
+$\operatorname{tr}(H^{64})=0$ forces $n > 2.1\times10^9$.
+\end{theorem}
+
+Since $\operatorname{tr}(H^L) = 0$ implies $\Cyc d$-freeness for every
+$d \mid L$, and a voltage lift is $\Cyc L$-free-by-walk-cancellation exactly
+when its Hashimoto trace vanishes at $L$, walk-certified constructions
+cannot reach $\Cyc{64}$ below two billion vertices. The bound is sharp in
+flavor: the smallest cubic graph with $\operatorname{tr}(H^8)=0$ has exactly
+$28$ vertices ($21$ witnesses, from a complete enumeration cross-checked
+against Markstr\"om's counts), and the smallest known with
+$\operatorname{tr}(H^{16})=0$ has $630$ (census record; bound says
+$\ge 130$). Separately, an exact sweep of voltage lifts over every cubic
+multigraph base on at most $6$ vertices (including loops and semi-edges) and
+the $71$ loopless bases on $8$ vertices, against the stated group library ---
+more than $2.3\times10^{10}$ configurations covering the window
+$n \in [46,126]$ ---
+found exactly three isomorphism classes avoiding
+$\{\Cyc4,\Cyc8,\Cyc{16}\}$, each containing $\Cyc{32}$: \emph{no lift
+counterexample exists below $128$ vertices in this scope}. In a different
+companion direction, the conjecture's falsity is \emph{equivalent} to the
+existence of an ``$\alpha$-block'' --- a $2$-connected graph with at most
+one vertex of degree $2$ whose cycle spectrum avoids every power of two up
+to its order --- a strictly more permissive search target; the exhaustive
+ladder for these is empty through $31$ vertices
+(\texttt{worktree-other-approaches} branch notes). C2030.1's cycle-only hole (walk count
+$194{,}880$, cycle count $0$) shows a second, subtler mechanism exists
+that the walk criterion cannot even see; the campaign obtained no general
+classification of that mechanism.
+
+\textbf{Unresolved quantities and scope limits.}
+(1) The smallest cubic graph with no $\Cyc4,\Cyc8,\Cyc{16}$ remains in
+$[50,82]$.
+(2) The census exhibits both walk-cancellation and cycle-only holes at $16$;
+no construction scaling these mechanisms to $32$ was obtained.
+(3) The trace-hole bound ($n \ge 130$ for $L=16$) and the record
+($n = 630$) leave a gap.
+(4) The general minimum-order frontier established here is $36$.
+
+\section{Data and reproducibility}
+\label{sec:data}
+
+The repository archives the source code, compact validation and result
+records, the full campaign report with per-run wall/CPU times, and the graph
+artifacts listed in the results directory. Bulk source censuses, most
+per-shard solver logs, and long-cycle witness files are not duplicated in the
+repository; the report records how those inputs and completion checks were
+validated. The repository history timestamps each result, and the final
+$n=48$ archive includes its monolith log, complete cube ledgers, aggregate
+records, and drivers. An audited aggregate CPU total is not claimed.
+
+\section*{Acknowledgments}
+
+This campaign was carried out in collaboration with Claude (Anthropic),
+which designed and operated the searches, wrote the toolchain, and drafted
+this note under the author's direction. Source, graph artifacts, and compact
+execution records are retained in the repository; the long-running
+computations are reproducibility claims rather than formal proof
+certificates. We thank Avery Carr, Arjun Balaji, and Klas
+Markstr\"om, whose work this campaign builds on, and the maintainers of
+\texttt{nauty}, SMS, CaDiCaL, and the Glasgow subgraph solver.
+
+\begin{thebibliography}{99}
+
+\bibitem{EG95} P.~Erd\H{o}s,
+\emph{Some old and new problems in various branches of combinatorics},
+Discrete Math.\ \textbf{165/166} (1997), 227--231. See also
+\texttt{erdosproblems.com/64}.
+
+\bibitem{DS01} D.~Daniel and S.~E.~Shauger,
+\emph{A result on the \EG{} conjecture in planar graphs},
+Congr.\ Numer.\ \textbf{153} (2001), 129--139.
+
+\bibitem{Shauger98} S.~E.~Shauger,
+\emph{Results on the \EG{} conjecture in $K_{1,m}$-free graphs},
+Congr.\ Numer.\ \textbf{134} (1998), 101--105.
+
+\bibitem{HK13} C.~C.~Heckman and R.~Krakovski,
+\emph{\EG{} conjecture for cubic planar graphs},
+Electron.\ J.\ Combin.\ \textbf{20}(2) (2013), \#P7.
+
+\bibitem{P8free} \emph{\EG{} conjecture for $P_8$-free graphs},
+Graphs Combin.\ \textbf{38} (2022). % Author list absent from the archived citation.
+
+\bibitem{P10free} \emph{The \EG{} conjecture holds for $P_{10}$-free
+graphs}, Discrete Math.\ (2024). % Author list absent from the archived citation.
+
+\bibitem{LM23} H.~Liu and R.~Montgomery,
+\emph{A solution to Erd\H{o}s and Hajnal's odd cycle problem},
+J.\ Amer.\ Math.\ Soc.\ \textbf{36} (2023), 1191--1234.
+
+\bibitem{Markstrom04} K.~Markstr\"om,
+\emph{Extremal graphs for some problems on cycles in graphs},
+Congr.\ Numer.\ \textbf{171} (2004), 179--192.
+
+\bibitem{Carr26} A.~Carr,
+\emph{Every minimal counterexample to the \EG{} conjecture is predominantly
+cubic}, arXiv:2605.22844 (2026).
+
+\bibitem{Balaji26} A.~Balaji,
+\emph{erdos-gyarfas-min-degree-3} (software and SAT frontier $n \le 31$),
+\url{https://github.com/ArjunBalaji79/erdos-gyarfas-min-degree-3} (2026).
+
+\bibitem{nauty} B.~D.~McKay and A.~Piperno,
+\emph{Practical graph isomorphism, II},
+J.\ Symbolic Comput.\ \textbf{60} (2014), 94--112.
+
+\bibitem{SMS} M.~Kirchweger and S.~Szeider,
+\emph{SAT modulo symmetries for graph generation},
+CP 2021; extended version J.\ Artif.\ Intell.\ Res.\ (2024).
+
+\bibitem{Glasgow} C.~McCreesh, P.~Prosser, and J.~Trimble,
+\emph{The Glasgow subgraph solver: using constraint programming to tackle
+hard subgraph isomorphism problem variants}, ICGT 2020.
+
+\bibitem{Conder} M.~Conder,
+\emph{Trivalent (cubic) symmetric graphs}, census files,
+\url{https://www.math.auckland.ac.nz/~conder/}.
+
+\bibitem{PSV13} P.~Poto\v{c}nik, P.~Spiga, and G.~Verret,
+\emph{Cubic vertex-transitive graphs on up to 1280 vertices},
+J.\ Symbolic Comput.\ \textbf{50} (2013), 465--477.
+
+\bibitem{SV08} B.~Sudakov and J.~Verstra\"ete,
+\emph{Cycle lengths in sparse graphs},
+Combinatorica \textbf{28} (2008), 357--372.
+
+\end{thebibliography}
+
+\end{document}

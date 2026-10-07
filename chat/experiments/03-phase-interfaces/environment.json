@@ -1,0 +1,6 @@
+{
+  "python": "3.13.5",
+  "networkx": "3.6.1",
+  "verification_requires_network": false,
+  "optimization_solver_required": false
+}

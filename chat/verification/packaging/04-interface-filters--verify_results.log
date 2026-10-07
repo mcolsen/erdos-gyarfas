@@ -1,0 +1,9 @@
+PASS: 554 cell spectra; 466 four-block reduction certificates; 86 genuine four-turn escapes
+PASS: all 306 hexagon/heptagon single-, double-, and triple-path routing states
+PASS: hep56_certificate.json completion edges at most 2 but 20 needed
+PASS: hex60_certificate.json completion edges at most 19 but 20 needed
+PASS: gap88_oracle_certificate.json completion edges at most 8 but 20 needed
+PASS: double 4064 explicit assembly-rejection witnesses
+PASS: triple 43583 explicit assembly-rejection witnesses
+PASS: constructive pentagon reduction and three composition-escape examples
+ALL CHECKS PASSED

@@ -1,0 +1,17 @@
+gate,description,stream,graphs,flag_comparisons,zero_bits_agreed_absent,mismatches,result
+L1,liftgen128 vs archived liftgen byte-diff (stdout+stats) cell nB8 Z6 n=48,archived cell A/8/Z6,265672,,,0,PASS
+L2,pipeline reproduction of archived percell row A/8/Z6 (p2check64 and p2check128): read=265672 passed=0 swept=552096 nonsimple=279402 disconn=7022,archived cell A/8/Z6,265672,,,0,PASS
+L3,shard-union (4 shards) byte-identical to whole-cell run,archived cell A/8/Z6,265672,,,0,PASS
+R,liftgen128 byte-identical to independent python/networkx ref_lift.py at n=72 (also swept/emitted stats equal),1 base nB8 x Z9,32736,,,0,PASS
+V1,3-way p2check64/p2check128/cycscan lengths {4;8;16;32} (p2check spectra also byte-identical),n<=64 lifts 116878 + archived samples 864,117742,469899,102886,0,PASS
+CR,crafted ground-truth graphs (cycles; cycle-unions; theta graphs) exact expected spectra incl. C64-absent cases; both checkers,synthetic n in [47;128],18,89,,0,PASS
+V2b,p2check128 vs cycscan full {4;8;16;32;64},nB8 x Z9 lifts n=72,2500,12500,2532,0,PASS
+V2c104,p2check128 vs cycscan {4;8;16},nB8 x Z13 lifts n=104,20000,60000,22208,0,PASS
+V2c120,p2check128 vs cycscan {4;8;16},nB10 x Z12 lifts n=120,20000,60000,10496,0,PASS
+V2g,p2check128 vs cycscan full {4;8;16;32;64},nB10 x Z12 lifts n=120,1000,5000,704,0,PASS
+V2d,p2check128 vs cycscan full spectra on phase-2 near-miss specimens (all confirmed {4;8;16}-free C32=C64=1),phase-2 survivors n in {96;120;126},60,300,180,0,PASS
+NX,3-way p2check128/cycscan/networkx-DFS {4;8;16},nB10 x Z12 lifts n=120,250,750,,0,PASS
+X4,liftgen128 x4 stream byte-identical to p2check128 -F 4 filtered plain stream,1 base nB12 x Z8,36864,,,0,PASS
+V2h,p2check128 vs cycscan {4;8;16} (bonus volume),nB8 x Z9 lifts n=72,40000,120000,41968,0,PASS
+SV,verify_survivor.py (independent nx DFS) self-test on crafted ground truths,synthetic,9,45,,0,PASS
+NM,independent nx DFS re-verification of near-miss class representatives (2 per order): {4;8;16} absent and C32;C64 present,production near-misses n in {96;108;110;120},8,40,,0,PASS

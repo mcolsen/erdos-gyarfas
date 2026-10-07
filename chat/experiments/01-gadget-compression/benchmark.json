@@ -1,0 +1,9 @@
+{
+  "direct_repetitions": 10,
+  "direct_wall_seconds": 0.8049608119999903,
+  "compressed_repetitions": 10000,
+  "compressed_wall_seconds": 0.439359,
+  "speed_ratio": 1832.1254645972663,
+  "c32": 216246,
+  "qualification": "Same retained graph, this runtime; direct timing includes ten process startups. Not a universal speedup."
+}

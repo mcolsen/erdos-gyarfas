@@ -1,0 +1,6 @@
+=== full space (no forbidden cycles) ===
+n=8  sms=4897  geng_connected=4896  geng_all=4897
+n=9  sms=149215  geng_connected=149210  geng_all=149215
+=== {C4,C8}-forbidden space ===
+n=10  sms=0  geng_connected=0  geng_all=0
+n=11  sms=0  geng_connected=0  geng_all=0

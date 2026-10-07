@@ -1,0 +1,32 @@
+[
+  {
+    "bundle": "eg_gadget_research",
+    "manifest": "MANIFEST.json",
+    "entries": 28,
+    "errors": []
+  },
+  {
+    "bundle": "eg_gap64_research",
+    "manifest": "MANIFEST.json",
+    "entries": 50,
+    "errors": []
+  },
+  {
+    "bundle": "eg_interface_filters",
+    "manifest": "SHA256SUMS.json",
+    "entries": 103,
+    "errors": []
+  },
+  {
+    "bundle": "eg_interface_phase_research",
+    "manifest": "SHA256SUMS",
+    "entries": 78,
+    "errors": []
+  },
+  {
+    "bundle": "eg_joint_research",
+    "manifest": "manifest.json",
+    "entries": 53,
+    "errors": []
+  }
+]

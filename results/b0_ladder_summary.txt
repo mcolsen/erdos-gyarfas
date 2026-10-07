@@ -1,0 +1,25 @@
+# B0 ladder (α-block SMS search): count of {powers-of-2 ≤ n}-free B0 graphs
+# rc=20 is smsg UNSAT exit; n=31 verdict cross-checked by 9 independent cube shards (all zero)
+n=10 rc=20 count=0 elapsed=0s
+n=11 rc=20 count=0 elapsed=0s
+n=12 rc=20 count=0 elapsed=0s
+n=13 rc=20 count=0 elapsed=0s
+n=14 rc=20 count=0 elapsed=0s
+n=15 rc=20 count=0 elapsed=0s
+n=16 rc=20 count=0 elapsed=1s
+n=17 rc=20 count=0 elapsed=4s
+n=18 rc=20 count=0 elapsed=8s
+n=19 rc=20 count=0 elapsed=28s
+n=20 rc=20 count=0 elapsed=27s
+n=21 rc=20 count=0 elapsed=31s
+n=22 rc=20 count=0 elapsed=121s
+n=23 rc=20 count=0 elapsed=275s
+n=24 rc=20 count=0 elapsed=258s
+n=25 rc=20 count=0 elapsed=669s
+n=26 rc=20 count=0 elapsed=976s
+n=27 rc=20 count=0 elapsed=2197s
+n=28 rc=20 count=0 elapsed=5134s
+n=29 rc=20 count=0 elapsed=10405s
+n=30 rc=20 count=0 elapsed=56244s
+n=31 rc=20 count=0 elapsed=168446s
+n=32 rc=cube count=0 elapsed=211886s shards=16 cubes=997  # p16 encoding ({4,8,16} patterns only): superset space, so count=0 settles the full rung

@@ -1,0 +1,67 @@
+[
+  {
+    "item": "n64 / seven C16s",
+    "status": "withdrawn",
+    "reason": "Stale-state/mislabeling acknowledged in the chat; never a valid retained result."
+  },
+  {
+    "item": "n64 surgery-family /117 C16s",
+    "status": "historical_report_no_graph",
+    "reason": "Corrected family result reported; explicit specimen not present."
+  },
+  {
+    "item": "n186 /264624 C32s",
+    "status": "historical_report_no_graph",
+    "reason": "Later descent beyond retained279630 was reported but artifact unavailable."
+  },
+  {
+    "item": "n190 /224547 C32s",
+    "status": "lost_checkpoint",
+    "reason": "Container reset was reported to erase edge list; no reconstruction data sufficient for this exact graph."
+  },
+  {
+    "item": "n198 /370616 raw and248305 descended C32s",
+    "status": "historical_report_no_graph",
+    "reason": "Cap experiment mentioned in chat; both graphs absent."
+  },
+  {
+    "item": "n190 /180300 C32s",
+    "status": "historical_report_no_graph",
+    "reason": "Gadget note refers to an intermediate improvement as retained; delivered bundle contains178077, not an180300 graph."
+  },
+  {
+    "item": "Early complete neighborhood and saddle ledgers",
+    "status": "not_retained",
+    "reason": "Local minimum counts for224547/219531 cannot be independently regenerated from a ledger here."
+  },
+  {
+    "item": "Full targeted4-8-edge search implementation and all task ledgers",
+    "status": "not_retained",
+    "reason": "Surgeries and some earlier sources survive; full10,672,609-task record does not."
+  },
+  {
+    "item": "Complete S3 radius-one/two and Z3^2 trial records",
+    "status": "not_retained",
+    "reason": "Reported counts are historical; no standalone full mutation ledger or552-vertex checkpoint."
+  },
+  {
+    "item": "Complete cap-source12/14 enumerations and random16/18/20/22 trials",
+    "status": "not_retained",
+    "reason": "Only order-eight cap summary and one representative are available."
+  },
+  {
+    "item": "The other98 probes in a196-probe grid",
+    "status": "incomplete",
+    "reason": "No negative conclusion for uncompleted probes."
+  },
+  {
+    "item": "Full order-sixteen domain of389760 cap attachments",
+    "status": "not_executed_to_completion",
+    "reason": "No completed census of this domain was reported."
+  },
+  {
+    "item": "The two discarded solver checkpoint resumes",
+    "status": "excluded_unsound_serialization",
+    "reason": "Not included in the retained joint run totals or bundle."
+  }
+]

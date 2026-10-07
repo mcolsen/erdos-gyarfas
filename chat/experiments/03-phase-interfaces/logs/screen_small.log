@@ -1,0 +1,21 @@
+0 0.0 {'four_block_inheritance': 1}
+100 0.13 {'four_block_inheritance': 80, 'breaks_dyadic_C4': 14, 'direct_inheritance': 2, 'unresolved_C4_pass': 5}
+FINAL 0.3288085460662842 {'four_block_inheritance': 149, 'breaks_dyadic_C4': 22, 'direct_inheritance': 3, 'unresolved_C4_pass': 7}
+b2_0_k4_0 n 6 ports 4 four_block_inheritance [] [[4, 5], [2, 5, 6]]
+b2_0_k5_0 n 7 ports 5 four_block_inheritance [] [[4, 5], [3, 5, 6], [2, 6, 7], [3, 4, 6, 7]]
+b2_0_k5_1 n 7 ports 5 four_block_inheritance [] [[2, 5, 6], [3, 5, 6], [4, 5, 7], [3, 4, 6, 7]]
+b4_0_k3_0 n 7 ports 3 direct_inheritance [4] [[4, 5, 6, 7]]
+b4_0_k4_0 n 8 ports 4 four_block_inheritance [] [[2, 5, 6, 7], [4, 5, 7, 8], [3, 4, 6, 7, 8]]
+b4_0_k5_0 n 9 ports 5 unresolved_C4_pass [] [[2, 6, 7], [3, 5, 7, 8], [4, 6, 7, 8, 9]]
+b4_1_k3_0 n 7 ports 3 direct_inheritance [4] [[3, 4, 5, 6, 7]]
+b4_1_k4_0 n 8 ports 4 four_block_inheritance [] [[2, 6, 7], [3, 4, 5, 7, 8], [3, 5, 6, 7, 8], [4, 5, 6, 7, 8]]
+b4_1_k5_0 n 9 ports 5 four_block_inheritance [] [[4, 6, 7, 8], [3, 5, 6, 7, 8], [2, 6, 7, 9]]
+b6_0_k5_0 n 11 ports 5 four_block_inheritance [] [[5, 6, 7, 8, 9], [4, 5, 6, 8, 9, 10], [4, 5, 7, 8, 9, 10], [3, 4, 5, 6, 9, 10, 11], [2, 6, 7, 9, 10, 11], [3, 4, 6, 7, 9, 10, 11], [4, 5, 6, 7, 9, 10, 11], [6, 7, 8, 9, 10, 11]]
+b6_0_k5_1 n 11 ports 5 four_block_inheritance [] [[4, 5, 7, 8], [6, 7, 8, 9, 10], [3, 4, 5, 6, 9, 10, 11], [3, 4, 6, 7, 9, 10, 11], [4, 5, 6, 7, 9, 10, 11]]
+b6_0_k5_2 n 11 ports 5 four_block_inheritance [] [[4, 6, 7, 8, 9], [4, 5, 6, 8, 9, 10], [6, 7, 8, 9, 10], [3, 4, 5, 6, 9, 10, 11], [2, 6, 7, 9, 10, 11], [3, 4, 6, 7, 9, 10, 11]]
+b6_2_k5_0 n 11 ports 5 four_block_inheritance [] [[2, 5, 7, 9, 10], [4, 5, 7, 8, 9, 10], [3, 5, 6, 7, 8, 10, 11], [3, 6, 7, 8, 9, 10, 11], [5, 6, 7, 8, 9, 10, 11]]
+b6_2_k5_1 n 11 ports 5 four_block_inheritance [] [[3, 5, 6, 8, 9, 10], [4, 5, 7, 8, 9, 10], [6, 7, 8, 9, 10], [2, 6, 7, 9, 10, 11]]
+b6_2_k5_2 n 11 ports 5 four_block_inheritance [] [[3, 4, 8, 9], [2, 5, 9, 10], [5, 6, 7, 8, 9, 10], [3, 4, 5, 7, 8, 10, 11], [4, 6, 7, 8, 9, 10, 11]]
+b6_4_k4_0 n 10 ports 4 four_block_inheritance [] [[2, 6, 7, 9, 10], [5, 6, 7, 8, 9, 10]]
+cycle3 n 3 ports 3 direct_inheritance [2] [[2, 3]]
+cycle5 n 5 ports 5 unresolved_C4_pass [] [[3, 4], [2, 5]]

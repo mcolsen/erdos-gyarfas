@@ -1,0 +1,14 @@
+{
+  "status": "UNKNOWN",
+  "rounds": 2366,
+  "clauses": 29276,
+  "seconds": 60.01787972450256,
+  "best_counts": null,
+  "cycle_clauses_by_length": {
+    "4": 3036,
+    "8": 26240
+  },
+  "max_collision_literals": 104,
+  "total_collision_literals": 686014,
+  "nfinal": 40
+}

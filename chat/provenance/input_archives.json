@@ -1,0 +1,52 @@
+[
+  {
+    "id": "01-gadget-compression",
+    "original_archive": "eg_gadget_research_bundle.zip",
+    "sha256": "410972cf6cc9e78e7f7253408885ce25e1130fe6e4e679830f57f6a4abd8b6d2",
+    "original_top_directory": "eg_gadget_research",
+    "expanded_directory": "experiments/01-gadget-compression",
+    "file_count": 29,
+    "note": "provenance/eg_gadget_research_note.md",
+    "preservation": "Copied intact at packaging with top directory renamed; subsequent archival prose edits and manifest refreshes are documented in PROVENANCE.md."
+  },
+  {
+    "id": "02-gap64",
+    "original_archive": "eg_gap64_research_bundle.zip",
+    "sha256": "2988e814707181f941df2e691968eb75dd896733c15dabf6e42dadab4c4a132a",
+    "original_top_directory": "eg_gap64_research",
+    "expanded_directory": "experiments/02-gap64",
+    "file_count": 51,
+    "note": "provenance/eg_gap64_research_note.md",
+    "preservation": "Copied intact at packaging with top directory renamed; subsequent archival prose edits and manifest refreshes are documented in PROVENANCE.md."
+  },
+  {
+    "id": "03-phase-interfaces",
+    "original_archive": "eg_interface_phase_research_bundle.zip",
+    "sha256": "c7906ea5eabc41bb754009d081577108cf5b03a2ecd49157d092eb04df02f640",
+    "original_top_directory": "eg_interface_phase_research",
+    "expanded_directory": "experiments/03-phase-interfaces",
+    "file_count": 79,
+    "note": "provenance/eg_interface_phase_research_note.md",
+    "preservation": "Copied intact at packaging with top directory renamed; subsequent archival prose edits and manifest refreshes are documented in PROVENANCE.md."
+  },
+  {
+    "id": "04-interface-filters",
+    "original_archive": "eg_interface_filters_bundle.zip",
+    "sha256": "5fdadfe7523c47add3819868a84d881ca02e14e0f08c43e9aac266c24cb6f215",
+    "original_top_directory": "eg_interface_filters",
+    "expanded_directory": "experiments/04-interface-filters",
+    "file_count": 104,
+    "note": "provenance/eg_interface_filters_note.md",
+    "preservation": "Copied intact at packaging with top directory renamed; subsequent archival prose edits and manifest refreshes are documented in PROVENANCE.md."
+  },
+  {
+    "id": "05-joint-synthesis",
+    "original_archive": "eg_joint_research_bundle.zip",
+    "sha256": "0a16b589ad22f6f89203fb7cd9e52855b33c60e678a0db84305f2bea3089f7b2",
+    "original_top_directory": "eg_joint_research",
+    "expanded_directory": "experiments/05-joint-synthesis",
+    "file_count": 54,
+    "note": "provenance/eg_joint_research_note.md",
+    "preservation": "Copied intact at packaging with top directory renamed; subsequent archival prose edits and manifest refreshes are documented in PROVENANCE.md."
+  }
+]

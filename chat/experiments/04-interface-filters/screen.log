@@ -1,0 +1,14 @@
+seconds 4.849950075149536 catalog 554 cache CacheInfo(hits=83182, misses=1638111, maxsize=200000, currsize=200000)
+certified fourblock 466
+r4 escape 86 modular 25
+survivors <=7ports
+cell0001 5 5 r4escape None modular []
+cell0002 6 6 r4escape [0, 0, 0, 1] modular []
+cell0003 7 7 r4escape [0, 0, 0, 1] modular [{'support': (3, 6), 'odd_divisor': 3}]
+cell0017 9 7 r4escape [0, 0, 0, 1] modular []
+cell0034 8 6 r4escape [0, 0, 0, 1] modular []
+cell0053 8 6 r4escape [0, 0, 0, 1] modular []
+cell0054 9 7 r4escape [0, 0, 0, 1] modular [{'support': (3, 6), 'odd_divisor': 3}]
+cell0093 11 7 r4escape [0, 0, 0, 0] modular []
+cell0094 11 7 r4escape [0, 0, 0, 0] modular []
+cell0095 11 7 r4escape None modular []

@@ -1,0 +1,9 @@
+Catalogue: 554 graphs, ALL internal cycles and terminal-path supports checked; {'four_block': 466, 'variable_factor': 2, 'explicit_escape': 86}
+U11: 330 four-block supports; 329 good witnesses; 329 partition repairs checked.
+Heptagon: all 11304 profiles at r=4,8,16,32,64,128 agree with the all-orders case proof.
+Pentagon variable-factor arithmetic: regression through r=1024 checked.
+Universal three-link motif: 1331 full graph assignments reconstructed; witnesses {8: 270, 16: 1061}
+contract_H56: 2986 degree-complete candidate graphs, 26378 collision-guarded rejection witnesses checked; status UNKNOWN
+contract_X60: 2366 degree-complete candidate graphs, 29276 collision-guarded rejection witnesses checked; status UNKNOWN
+contract_R64: 735 degree-complete candidate graphs, 11618 collision-guarded rejection witnesses checked; status UNKNOWN_SOLVER
+VERIFIED. Elapsed seconds: 21.07

@@ -1,0 +1,13 @@
+0 seeds 524 depth 1 n 8 valid 0 total 524 queue 523 sec 0.01
+50 seeds 524 depth 1 n 10 valid 0 total 533 queue 482 sec 0.26
+100 seeds 524 depth 1 n 10 valid 0 total 535 queue 434 sec 0.51
+150 seeds 524 depth 1 n 12 valid 0 total 535 queue 384 sec 0.75
+200 seeds 524 depth 1 n 12 valid 0 total 535 queue 334 sec 0.99
+250 seeds 524 depth 1 n 12 valid 0 total 536 queue 285 sec 1.24
+300 seeds 524 depth 1 n 12 valid 0 total 536 queue 235 sec 1.48
+350 seeds 524 depth 1 n 12 valid 0 total 536 queue 185 sec 1.73
+400 seeds 524 depth 1 n 12 valid 0 total 536 queue 135 sec 1.98
+450 seeds 524 depth 1 n 12 valid 0 total 536 queue 85 sec 2.22
+500 seeds 524 depth 1 n 12 valid 0 total 536 queue 35 sec 2.47
+550 seeds 524 depth 2 n 16 valid 0 total 553 queue 2 sec 2.72
+FINAL seeds 524 states 553 tested 2581404 valid 142 maxdepth 2 maxn 18 queue 0 sec 2.733675956726074

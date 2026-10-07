@@ -1,0 +1,6 @@
+hep56 compatible 40 excluded 716 routecache CacheInfo(hits=4474, misses=30, maxsize=None, currsize=30) elapsed 0.18225765228271484
+hep56 pairs 780 conflicts 596 cliquecoverbound 4 required 20 elapsed 0.2839224338531494
+hex60 compatible 289 excluded 471 routecache CacheInfo(hits=7183, misses=29, maxsize=None, currsize=29) elapsed 0.34737443923950195
+hex60 pairs 41616 conflicts 20670 cliquecoverbound 19 required 20 elapsed 4.65436863899231
+gap88 compatible 56 excluded 716 routecache CacheInfo(hits=3622, misses=26, maxsize=None, currsize=26) elapsed 4.770275115966797
+gap88 pairs 1540 conflicts 660 cliquecoverbound 8 required 20 elapsed 4.947297096252441

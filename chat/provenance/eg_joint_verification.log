@@ -1,0 +1,20 @@
+Catalogue: 554 graphs, ALL internal cycles and terminal-path supports checked; {'four_block': 466, 'variable_factor': 2, 'explicit_escape': 86}
+U11: 330 four-block supports; 329 good witnesses; 329 partition repairs checked.
+Heptagon: all 11304 profiles at r=4,8,16,32,64,128 agree with the all-orders case proof.
+Pentagon variable-factor arithmetic: regression through r=1024 checked.
+Universal three-link motif: 1331 full graph assignments reconstructed; witnesses {8: 270, 16: 1061}
+contract_H56: 2986 degree-complete candidate graphs, 26378 collision-guarded rejection witnesses checked; status UNKNOWN
+contract_X60: 2366 degree-complete candidate graphs, 29276 collision-guarded rejection witnesses checked; status UNKNOWN
+contract_R64: 735 degree-complete candidate graphs, 11618 collision-guarded rejection witnesses checked; status UNKNOWN_SOLVER
+VERIFIED. Elapsed seconds: 21.07
+
+strong_test: 5971 routing schemas; each truth table independently reconstructed; 457 type-independent rules; 5971 slot-injection instances; 841895 verification states.
+sym33alpha: 1474 routing schemas; each truth table independently reconstructed; 127 type-independent rules; 8799 slot-injection instances; 206281 verification states.
+sym33cell: 2425 routing schemas; each truth table independently reconstructed; 149 type-independent rules; 14508 slot-injection instances; 423424 verification states.
+sym55alpha: 1663 routing schemas; each truth table independently reconstructed; 256 type-independent rules; 83945 slot-injection instances; 337617 verification states.
+clean33alpha: 885 routing schemas; each truth table independently reconstructed; 56 type-independent rules; 5310 slot-injection instances; 162014 verification states.
+clean33cell: 1068 routing schemas; each truth table independently reconstructed; 50 type-independent rules; 6408 slot-injection instances; 233281 verification states.
+VERIFIED 13486 learned joint-routing schemas. Seconds: 16.897
+
+Verified 1252 nonempty graph-atlas graphs; 7512 full count comparisons; witness, cap, and timeout semantics.
+Native Z3 model evaluation and assertion-only export/reload verified.

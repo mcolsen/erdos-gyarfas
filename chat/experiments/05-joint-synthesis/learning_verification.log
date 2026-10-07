@@ -1,0 +1,7 @@
+strong_test: 5971 routing schemas; each truth table independently reconstructed; 457 type-independent rules; 5971 slot-injection instances; 841895 verification states.
+sym33alpha: 1474 routing schemas; each truth table independently reconstructed; 127 type-independent rules; 8799 slot-injection instances; 206281 verification states.
+sym33cell: 2425 routing schemas; each truth table independently reconstructed; 149 type-independent rules; 14508 slot-injection instances; 423424 verification states.
+sym55alpha: 1663 routing schemas; each truth table independently reconstructed; 256 type-independent rules; 83945 slot-injection instances; 337617 verification states.
+clean33alpha: 885 routing schemas; each truth table independently reconstructed; 56 type-independent rules; 5310 slot-injection instances; 162014 verification states.
+clean33cell: 1068 routing schemas; each truth table independently reconstructed; 50 type-independent rules; 6408 slot-injection instances; 233281 verification states.
+VERIFIED 13486 learned joint-routing schemas. Seconds: 16.897

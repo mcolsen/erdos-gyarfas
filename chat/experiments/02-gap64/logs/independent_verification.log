@@ -1,0 +1,7 @@
+Independent base enumeration: {12: 1008, 14: 864, 16: 3780, 18: 14112, 20: 51408}
+Zero-voltage cycles: {14: 94, 16: 303, 18: 971, 20: 3465}
+Exact edge-for-edge assembly, connected cubic graph; gap16..64; exact C65=630; explicit C128.
+Explicit non-simple cyclically nonbacktracking 64-walk verified.
+Lifted core independently has three disjoint perfect matchings.
+SHA256 9279d54bb246b2368f895fc5e144342c3da336955745bb802023ff7424538064
+PASS

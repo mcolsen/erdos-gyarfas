@@ -1,0 +1,4 @@
+initial=180300
+best=179548 moves=532459 valid=71301 accepted=3246 t=4.412
+best=178077 moves=532499 valid=71309 accepted=3247 t=4.413
+DONE best=178077 moves=1229949 valid=160660 accepted=6726 elapsed=10.000

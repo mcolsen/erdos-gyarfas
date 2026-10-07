@@ -1,0 +1,15 @@
+Catalogue: 181 valid distinct cells; atlas control: 9
+Inheritance: {'four_block_inheritance': 149, 'breaks_dyadic_C4': 22, 'direct_inheritance': 3, 'unresolved_C4_pass': 7} ; four-turn cases: 83161
+Routing: all 4,668 actions checked independently; 553 representative graphs checked.
+Strip closure: 2581404 certified state/action checks; 142 valid labelled transitions; no two-step transition.
+Four-link gluing: all 8 stored survivors checked; one 18-vertex six-port isomorphism class.
+Phase rule: one A is the unique power-free A/B count on tested dyadic rings; all-order proof in note.
+Ring 4: n=32, 204 cycles enumerated independently, circumference=27, power-free; degree-two ports=16.
+Ring 5: n=40, 258 cycles enumerated independently, circumference=30, power-free; degree-two ports=20.
+Ring 8: n=64, 49176 cycles enumerated independently, circumference=55, power-free; degree-two ports=32.
+Repair witnesses, ring 4: at least 13 edge-frozen ports; at least 16 ports cannot be touched by a new degree-three-or-higher hub even with cubic old neighbours.
+Repair witnesses, ring 5: at least 10 edge-frozen ports; at least 20 ports cannot be touched by a new degree-three-or-higher hub even with cubic old neighbours.
+Repair witnesses, ring 8: at least 29 edge-frozen ports; at least 29 ports cannot be touched by a new degree-three-or-higher hub even with cubic old neighbours.
+Cap exclusions, ring 4 : all 184 caps; independently verified path sets and 3162 CSP prefix states.
+Cap exclusions, ring 5 : all 184 caps; independently verified path sets and 3864 CSP prefix states.
+PASS; elapsed seconds: 9.4

@@ -1,0 +1,49 @@
+{
+  "mixed_core30_n370": {
+    "n": 370,
+    "m": 555,
+    "degree_counts": {
+      "3": 370
+    },
+    "connected": true,
+    "vertex_connectivity": 3,
+    "edge_connectivity": 3,
+    "sha256": "75ff07f380e9c5e2f410228254c10d4446a1159aced1612230daee5c572d3859",
+    "direct_python_cycles_through16": {
+      "11": 300,
+      "12": 400,
+      "10": 120,
+      "13": 300,
+      "14": 120,
+      "15": 20,
+      "9": 20,
+      "7": 50,
+      "6": 100,
+      "5": 50,
+      "3": 100
+    },
+    "C33": 43
+  },
+  "eg190_178077": {
+    "n": 190,
+    "m": 285,
+    "degree_counts": {
+      "3": 190
+    },
+    "connected": true,
+    "vertex_connectivity": 3,
+    "edge_connectivity": 3,
+    "sha256": "1083e61a82aa17f96ff1288ffebb5ce691f613c422b88cb14781eeb995978997"
+  },
+  "input_216246": {
+    "n": 190,
+    "m": 285,
+    "degree_counts": {
+      "3": 190
+    },
+    "connected": true,
+    "vertex_connectivity": 3,
+    "edge_connectivity": 3,
+    "sha256": "60a04c2d2ccfdc652545f978cdb29e5e15bd085d64e49d97182a3eb68ac6769b"
+  }
+}

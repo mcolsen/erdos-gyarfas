@@ -1,0 +1,282 @@
+[
+  {
+    "id": "B01",
+    "finding": "Prior campaign lower bounds: general >=36, cubic >=50, bipartite >=57",
+    "scope": "Background from the user repository, not a new continuation result.",
+    "documentation": "docs/01-prior-campaign-context.md",
+    "evidence_type": "historical_upstream"
+  },
+  {
+    "id": "G01",
+    "finding": "61-vertex one-deficiency seed: C4=C8=0, C16=8, C32=176980",
+    "scope": "Not an alpha-block or counterexample.",
+    "documentation": "docs/02-alpha-block-and-voltage-lifts.md",
+    "evidence_type": "retained_graph_fresh_count"
+  },
+  {
+    "id": "G02",
+    "finding": "184-vertex cubic Z3 hub lift: no C4/C8/C16; C32=492309",
+    "scope": "Corrected projection split matters; nonsimple base projections cannot be ignored.",
+    "documentation": "docs/02-alpha-block-and-voltage-lifts.md",
+    "evidence_type": "retained_graph_fresh_count"
+  },
+  {
+    "id": "G03",
+    "finding": "Noncubic 183- and 181-vertex lift completions: C32=819153 and 831828",
+    "scope": "Degree-four/six examples, still contain C32.",
+    "documentation": "docs/02-alpha-block-and-voltage-lifts.md",
+    "evidence_type": "retained_graph_fresh_count"
+  },
+  {
+    "id": "G04",
+    "finding": "Triangle cap: n186 C32=476415; symmetry-broken n186 C32=279630",
+    "scope": "No C4/C8/C16; count reduction only.",
+    "documentation": "docs/03-cap-and-local-search-history.md",
+    "evidence_type": "retained_graph_fresh_count"
+  },
+  {
+    "id": "H01",
+    "finding": "Reported n190 C32=224547 local basin",
+    "scope": "Exact graph and complete neighborhood ledger lost; report only.",
+    "documentation": "docs/03-cap-and-local-search-history.md",
+    "evidence_type": "historical_missing_artifact"
+  },
+  {
+    "id": "G05",
+    "finding": "Recovered n190 checkpoints C32=220225 and 219531",
+    "scope": "Reconstructed from explicit serialization/table and directly recounted.",
+    "documentation": "docs/03-cap-and-local-search-history.md",
+    "evidence_type": "reconstructed_fresh_count"
+  },
+  {
+    "id": "G06",
+    "finding": "Targeted surgery: 219531 ->216687 ->216367 ->216246",
+    "scope": "Successful edge operations retained; aggregate historical exhaustive ledgers not retained.",
+    "documentation": "docs/04-targeted-multiedge-search.md",
+    "evidence_type": "reconstructed_fresh_count"
+  },
+  {
+    "id": "H02",
+    "finding": "10,672,609 reported reconnection tasks; 104,797 survivors",
+    "scope": "Arithmetic checked; workload includes overlapping scopes, not unique graphs.",
+    "documentation": "docs/04-targeted-multiedge-search.md",
+    "evidence_type": "historical_workload_only"
+  },
+  {
+    "id": "T01",
+    "finding": "Exact compression through three-edge interfaces",
+    "scope": "Simple cycle crosses zero/two boundary edges; applies to this decomposition, not arbitrary covers.",
+    "documentation": "docs/05-exact-gadget-compression.md",
+    "evidence_type": "written_proof_and_finite_checks"
+  },
+  {
+    "id": "G07",
+    "finding": "n190 no C4/C8/C16, C32=178077",
+    "scope": "Best retained fixed-order count in this chat, not a global record.",
+    "documentation": "docs/05-exact-gadget-compression.md",
+    "evidence_type": "retained_graph_fresh_count"
+  },
+  {
+    "id": "M01",
+    "finding": "Approximately 1,832-fold specialized counting speedup",
+    "scope": "Historical measured runtime includes process startup; not universal performance.",
+    "documentation": "docs/05-exact-gadget-compression.md",
+    "evidence_type": "retained_benchmark"
+  },
+  {
+    "id": "G08",
+    "finding": "n370 cubic: no C4/C8/C16/C32; gap16-32; C33=43",
+    "scope": "Explicit C64; fixed-core solver optimality is not global order minimality.",
+    "documentation": "docs/06-order370-cycle-gap.md",
+    "evidence_type": "retained_construction_certificate"
+  },
+  {
+    "id": "T02",
+    "finding": "13- and 15-cycle parity contradictions on two cores",
+    "scope": "All T3/T7/T15 assignments on those two cores excluded as full counterexamples.",
+    "documentation": "docs/07-fixed-core-parity-obstructions.md",
+    "evidence_type": "written_proof_and_finite_certificates"
+  },
+  {
+    "id": "G09",
+    "finding": "n26550 cubic: no powers through64; gap16-64; C65=630",
+    "scope": "Explicit C128; construction optimality not proved.",
+    "documentation": "docs/08-order26550-cycle-gap.md",
+    "evidence_type": "retained_construction_certificate"
+  },
+  {
+    "id": "T03",
+    "finding": "3*n3 - n7 -17*n15 >=9 on bridgeless cubic cores",
+    "scope": "Necessary condition for these specific interval templates; mixed family not fully excluded.",
+    "documentation": "docs/09-turn-charge-inequality.md",
+    "evidence_type": "written_proof_with_external_theorem"
+  },
+  {
+    "id": "T04",
+    "finding": "Safe triangular recursion closes at T3,T7,T15",
+    "scope": "540 local combinations plus induction; not all arbitrary cells.",
+    "documentation": "docs/10-triangle-grammar-closure.md",
+    "evidence_type": "written_proof_and_finite_certificates"
+  },
+  {
+    "id": "T05",
+    "finding": "Theta(2,3,3) uniform fourfold dilation",
+    "scope": "Includes scoped quotient extensions; not an arbitrary mixed-cell exclusion.",
+    "documentation": "docs/11-theta233-dilation.md",
+    "evidence_type": "written_proof_and_regression"
+  },
+  {
+    "id": "G10",
+    "finding": "294-vertex theta assembly: C4=C8=0, C16=122",
+    "scope": "Retained unsuccessful experiment; no optimum established.",
+    "documentation": "docs/11-theta233-dilation.md",
+    "evidence_type": "retained_graph_fresh_count"
+  },
+  {
+    "id": "C01",
+    "finding": "181-cell exhaustive small-interface domain",
+    "scope": "3-7 terminals, <=6 cubic vertices, biconnected and simple; precise domain only.",
+    "documentation": "docs/12-exhaustive181-cell-census.md",
+    "evidence_type": "scoped_census_and_verifier"
+  },
+  {
+    "id": "T06",
+    "finding": "Four-turn block certificate proves uniform dyadic inheritance at all scales",
+    "scope": "152/181 certified in the first domain; labels do not carry automatically to mixed libraries.",
+    "documentation": "docs/12-exhaustive181-cell-census.md",
+    "evidence_type": "written_proof_and_finite_certificates"
+  },
+  {
+    "id": "T07",
+    "finding": "Theta(2,3,4) cycle family is power-free iff exactly one A turn",
+    "scope": "For dyadic quotient cycles using specified A/B passages, not all routes in a complete graph.",
+    "documentation": "docs/13-theta234-phase-hole.md",
+    "evidence_type": "written_proof_and_finite_checks"
+  },
+  {
+    "id": "G11",
+    "finding": "Power-free phase boundary graphs at n32,n40,n64",
+    "scope": "Degree-two terminals remain; total cycle counts 204,258,49176.",
+    "documentation": "docs/13-theta234-phase-hole.md",
+    "evidence_type": "retained_boundary_graphs"
+  },
+  {
+    "id": "E01",
+    "finding": "Three-cell strip exclusion",
+    "scope": "46 specified cells, 4668 actions,553 states,2581404 transitions checked; only this architecture.",
+    "documentation": "docs/14-strips-and-four-link-gluings.md",
+    "evidence_type": "finite_closure_certificate"
+  },
+  {
+    "id": "G12",
+    "finding": "18-vertex six-terminal cell from four-link gluing",
+    "scope": "Eight labelled survivors, one isomorphism class; not a degree-complete graph.",
+    "documentation": "docs/14-strips-and-four-link-gluings.md",
+    "evidence_type": "retained_cell_and_generator"
+  },
+  {
+    "id": "E02",
+    "finding": "Phase-ring edge/hub/cap repair exclusions",
+    "scope": "Frozen seeds; all184 caps tested on n32 and n40 only; arbitrary networks not excluded.",
+    "documentation": "docs/15-phase-boundary-repair.md",
+    "evidence_type": "finite_path_and_constraint_certificates"
+  },
+  {
+    "id": "C02",
+    "finding": "Constructed catalogue of554 cells",
+    "scope": "Specified families/restricted enumerations, not exhaustive by graph order.",
+    "documentation": "docs/16-constructed554-cell-catalogue.md",
+    "evidence_type": "explicit_catalogue_and_verifier"
+  },
+  {
+    "id": "T08",
+    "finding": "Pentagon variable-factor transmission",
+    "scope": "Can require factor2 or4; no single common factor needed.",
+    "documentation": "docs/17-block-and-pentagon-transmission.md",
+    "evidence_type": "written_proof_and_regression"
+  },
+  {
+    "id": "T09",
+    "finding": "Hexagon parity, heptagon odd-divisor and G11 narrow-band escapes",
+    "scope": "Selected simple quotient cycle families; unused terminals remain.",
+    "documentation": "docs/18-composition-escape-examples.md",
+    "evidence_type": "written_proofs_and_finite_checks"
+  },
+  {
+    "id": "E03",
+    "finding": "H56, X60, G88 fixed completion limits: <=2,19,8 edges",
+    "scope": "Each needs20; bounds from witnesses/conflict certificates; fixed vertex set and matching scope.",
+    "documentation": "docs/19-frozen-backbone-completions.md",
+    "evidence_type": "finite_impossibility_certificates"
+  },
+  {
+    "id": "M02",
+    "finding": "Exact repeated-visit interface oracle",
+    "scope": "Multi-path disjointness, parity equations and one-circuit constraint;24 full-spectrum controls.",
+    "documentation": "docs/20-exact-interface-oracle.md",
+    "evidence_type": "implementation_and_independent_regression"
+  },
+  {
+    "id": "E04",
+    "finding": "47,647 mixed triangle-motif candidates rejected",
+    "scope": "47501 C8 witnesses,146 C16; complete explicit motif/library scopes, labelled counts.",
+    "documentation": "docs/21-mixed-cell-synthesis-motifs.md",
+    "evidence_type": "retained_rejection_ledgers"
+  },
+  {
+    "id": "T10",
+    "finding": "Exact heptagon safe profiles at every dyadic scale",
+    "scope": "Three allowed profiles depending on exponent parity;11304 regression profiles.",
+    "documentation": "docs/22-heptagon-phase-classification.md",
+    "evidence_type": "written_proof_and_finite_regression"
+  },
+  {
+    "id": "T11",
+    "finding": "U11 variable-factor transmission",
+    "scope": "330 block types,329 repair identities; U11 differs from G11.",
+    "documentation": "docs/23-u11-variable-transmission.md",
+    "evidence_type": "written_proof_and_finite_certificates"
+  },
+  {
+    "id": "C03",
+    "finding": "Final554-cell classification:468 transmitters,86 local escapes",
+    "scope": "No remaining unclassified supplied object; no all-cell classification or mixed exclusion.",
+    "documentation": "docs/23-u11-variable-transmission.md",
+    "evidence_type": "explicit_catalogue_classification"
+  },
+  {
+    "id": "M03",
+    "finding": "Joint cell-choice and wiring model",
+    "scope": "2337 assignments;13486 schemas;1095 topology-only records; all runs unresolved.",
+    "documentation": "docs/24-joint-cell-and-wiring-search.md",
+    "evidence_type": "verified_learning_unknown_search"
+  },
+  {
+    "id": "E05",
+    "finding": "Universal bad three-link pattern across11 cell choices",
+    "scope": "All1331 choices have a checked C8 orC16 witness; specific port topology only.",
+    "documentation": "docs/24-joint-cell-and-wiring-search.md",
+    "evidence_type": "finite_quantified_certificate"
+  },
+  {
+    "id": "M04",
+    "finding": "Collision-guarded identification learning",
+    "scope": "6087 complete quotient candidates;67272 checked clauses; identification is nonmonotone.",
+    "documentation": "docs/25-guarded-terminal-identification.md",
+    "evidence_type": "verified_learning_unknown_search"
+  },
+  {
+    "id": "T12",
+    "finding": "All-T7/T15 impossible on every connected simple cubic core",
+    "scope": "Bridge extension closes earlier exception; specific templates, not all noncubic or mixed constructions.",
+    "documentation": "docs/26-bridge-extension.md",
+    "evidence_type": "written_proof_with_external_theorem"
+  },
+  {
+    "id": "T13",
+    "finding": "Local mixed-cell charge condition in every leaf bridge component",
+    "scope": "Sum of ordinary vertex charges plus2*c_w >=9; necessary, not sufficient.",
+    "documentation": "docs/26-bridge-extension.md",
+    "evidence_type": "written_proof_with_external_theorem"
+  }
+]

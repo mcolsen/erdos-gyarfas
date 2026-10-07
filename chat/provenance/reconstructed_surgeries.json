@@ -1,0 +1,92 @@
+{
+  "starting_table": "legacy/replay/edge_counts_219531.tsv",
+  "starting_graph": "data/graphs/n190_c32_219531.edge",
+  "operations": [
+    {
+      "remove": [
+        [
+          29,
+          32
+        ],
+        [
+          44,
+          141
+        ],
+        [
+          48,
+          101
+        ],
+        [
+          126,
+          174
+        ]
+      ],
+      "add": [
+        [
+          29,
+          44
+        ],
+        [
+          32,
+          126
+        ],
+        [
+          48,
+          174
+        ],
+        [
+          101,
+          141
+        ]
+      ],
+      "reported_c32": 216687
+    },
+    {
+      "remove": [
+        [
+          65,
+          143
+        ],
+        [
+          170,
+          183
+        ]
+      ],
+      "add": [
+        [
+          65,
+          170
+        ],
+        [
+          143,
+          183
+        ]
+      ],
+      "reported_c32": 216367
+    },
+    {
+      "remove": [
+        [
+          19,
+          85
+        ],
+        [
+          34,
+          182
+        ]
+      ],
+      "add": [
+        [
+          19,
+          34
+        ],
+        [
+          85,
+          182
+        ]
+      ],
+      "reported_c32": 216246
+    }
+  ],
+  "final_matches": "experiments/01-gadget-compression/data/input_216246.edge"
+}

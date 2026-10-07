@@ -1,0 +1,961 @@
+[
+  {
+    "path": "data/graphs/n032_phase_boundary.edge",
+    "sha256": "88485b0063c1ceda55348e43e6ec764e67e08df791d3524227186dc979795f34",
+    "vertices": 32,
+    "edges": 40,
+    "degree_histogram": {
+      "2": 16,
+      "3": 16
+    },
+    "connected": true,
+    "fresh_exact_cycle_counts": {
+      "4": 0,
+      "8": 0,
+      "16": 0,
+      "32": 0
+    },
+    "fresh_count_status": {
+      "4": {
+        "status": "EXACT",
+        "stdout": "n=32 L=4 count=0",
+        "stderr": "",
+        "seconds": 0.002
+      },
+      "8": {
+        "status": "EXACT",
+        "stdout": "n=32 L=8 count=0",
+        "stderr": "",
+        "seconds": 0.001
+      },
+      "16": {
+        "status": "EXACT",
+        "stdout": "n=32 L=16 count=0",
+        "stderr": "",
+        "seconds": 0.001
+      },
+      "32": {
+        "status": "EXACT",
+        "stdout": "n=32 L=32 count=0",
+        "stderr": "",
+        "seconds": 0.001
+      }
+    },
+    "vertex_connectivity": 2,
+    "edge_connectivity": 2,
+    "origin": "experiments/03-phase-interfaces/data/phase_ring_4.edge",
+    "not_counterexample_reason": "Minimum degree is2; some boundary examples also contain forbidden cycles."
+  },
+  {
+    "path": "data/graphs/n040_phase_boundary.edge",
+    "sha256": "a8103f1714f739eb02ddd187fb04e94fc9eea22a2fa1d0be10beb19120bbd083",
+    "vertices": 40,
+    "edges": 50,
+    "degree_histogram": {
+      "2": 20,
+      "3": 20
+    },
+    "connected": true,
+    "fresh_exact_cycle_counts": {
+      "4": 0,
+      "8": 0,
+      "16": 0,
+      "32": 0
+    },
+    "fresh_count_status": {
+      "4": {
+        "status": "EXACT",
+        "stdout": "n=40 L=4 count=0",
+        "stderr": "",
+        "seconds": 0.002
+      },
+      "8": {
+        "status": "EXACT",
+        "stdout": "n=40 L=8 count=0",
+        "stderr": "",
+        "seconds": 0.001
+      },
+      "16": {
+        "status": "EXACT",
+        "stdout": "n=40 L=16 count=0",
+        "stderr": "",
+        "seconds": 0.001
+      },
+      "32": {
+        "status": "EXACT",
+        "stdout": "n=40 L=32 count=0",
+        "stderr": "",
+        "seconds": 0.001
+      }
+    },
+    "vertex_connectivity": 2,
+    "edge_connectivity": 2,
+    "origin": "experiments/03-phase-interfaces/data/phase_ring_5.edge",
+    "not_counterexample_reason": "Minimum degree is2; some boundary examples also contain forbidden cycles."
+  },
+  {
+    "path": "data/graphs/n061_one_deficiency_c16_8.edge",
+    "sha256": "c129663d813ac49bcd307fe62da27d1920e50b2132e73422b7d6cc4d2e95d3f8",
+    "vertices": 61,
+    "edges": 91,
+    "degree_histogram": {
+      "2": 1,
+      "3": 60
+    },
+    "connected": true,
+    "fresh_exact_cycle_counts": {
+      "4": 0,
+      "8": 0,
+      "16": 8,
+      "32": 176980
+    },
+    "fresh_count_status": {
+      "4": {
+        "status": "EXACT",
+        "stdout": "n=61 L=4 count=0",
+        "stderr": "",
+        "seconds": 0.002
+      },
+      "8": {
+        "status": "EXACT",
+        "stdout": "n=61 L=8 count=0",
+        "stderr": "",
+        "seconds": 0.001
+      },
+      "16": {
+        "status": "EXACT",
+        "stdout": "n=61 L=16 count=8",
+        "stderr": "",
+        "seconds": 0.001
+      },
+      "32": {
+        "status": "EXACT",
+        "stdout": "n=61 L=32 count=176980",
+        "stderr": "",
+        "seconds": 0.086
+      }
+    },
+    "vertex_connectivity": 2,
+    "edge_connectivity": 2,
+    "origin": "legacy/b0_runs/continue12/s403.g6 (graph6 representation converted to one-based DIMACS)",
+    "not_counterexample_reason": "Minimum degree is2; some boundary examples also contain forbidden cycles."
+  },
+  {
+    "path": "data/graphs/n064_phase_boundary.edge",
+    "sha256": "611296f3623f95b337caa729b9dfb497cfeedbc2b7672218ba3ce1ed62391157",
+    "vertices": 64,
+    "edges": 80,
+    "degree_histogram": {
+      "2": 32,
+      "3": 32
+    },
+    "connected": true,
+    "fresh_exact_cycle_counts": {
+      "4": 0,
+      "8": 0,
+      "16": 0,
+      "32": 0,
+      "64": 0
+    },
+    "fresh_count_status": {
+      "4": {
+        "status": "EXACT",
+        "stdout": "n=64 L=4 count=0",
+        "stderr": "",
+        "seconds": 0.002
+      },
+      "8": {
+        "status": "EXACT",
+        "stdout": "n=64 L=8 count=0",
+        "stderr": "",
+        "seconds": 0.001
+      },
+      "16": {
+        "status": "EXACT",
+        "stdout": "n=64 L=16 count=0",
+        "stderr": "",
+        "seconds": 0.001
+      },
+      "32": {
+        "status": "EXACT",
+        "stdout": "n=64 L=32 count=0",
+        "stderr": "",
+        "seconds": 0.001
+      },
+      "64": {
+        "status": "EXACT",
+        "stdout": "n=64 L=64 count=0",
+        "stderr": "",
+        "seconds": 0.011
+      }
+    },
+    "vertex_connectivity": 2,
+    "edge_connectivity": 2,
+    "origin": "experiments/03-phase-interfaces/data/phase_ring_8.edge",
+    "not_counterexample_reason": "Minimum degree is2; some boundary examples also contain forbidden cycles."
+  },
+  {
+    "path": "data/graphs/n181_noncubic_c32_831828.edge",
+    "sha256": "08cabaa18aa1b594b68be3a8fcf7b1432cb88cb36536182a2d2ba151258f77ff",
+    "vertices": 181,
+    "edges": 273,
+    "degree_histogram": {
+      "3": 180,
+      "6": 1
+    },
+    "connected": true,
+    "fresh_exact_cycle_counts": {
+      "4": 0,
+      "8": 0,
+      "16": 0,
+      "32": 831828
+    },
+    "fresh_count_status": {
+      "4": {
+        "status": "EXACT",
+        "stdout": "n=181 L=4 count=0",
+        "stderr": "",
+        "seconds": 0.002
+      },
+      "8": {
+        "status": "EXACT",
+        "stdout": "n=181 L=8 count=0",
+        "stderr": "",
+        "seconds": 0.001
+      },
+      "16": {
+        "status": "EXACT",
+        "stdout": "n=181 L=16 count=0",
+        "stderr": "",
+        "seconds": 0.002
+      },
+      "32": {
+        "status": "EXACT",
+        "stdout": "n=181 L=32 count=831828",
+        "stderr": "",
+        "seconds": 0.229
+      }
+    },
+    "vertex_connectivity": 3,
+    "edge_connectivity": 3,
+    "origin": "legacy/lift3_cap_runs/m2_s7404.edge",
+    "not_counterexample_reason": "Contains C32."
+  },
+  {
+    "path": "data/graphs/n183_noncubic_c32_819153.edge",
+    "sha256": "9394b43dccabdc25b66debb20a223278bb5c1735b2b5d0b3982c7ab4591b19c9",
+    "vertices": 183,
+    "edges": 276,
+    "degree_histogram": {
+      "3": 180,
+      "4": 3
+    },
+    "connected": true,
+    "fresh_exact_cycle_counts": {
+      "4": 0,
+      "8": 0,
+      "16": 0,
+      "32": 819153
+    },
+    "fresh_count_status": {
+      "4": {
+        "status": "EXACT",
+        "stdout": "n=183 L=4 count=0",
+        "stderr": "",
+        "seconds": 0.002
+      },
+      "8": {
+        "status": "EXACT",
+        "stdout": "n=183 L=8 count=0",
+        "stderr": "",
+        "seconds": 0.002
+      },
+      "16": {
+        "status": "EXACT",
+        "stdout": "n=183 L=16 count=0",
+        "stderr": "",
+        "seconds": 0.002
+      },
+      "32": {
+        "status": "EXACT",
+        "stdout": "n=183 L=32 count=819153",
+        "stderr": "",
+        "seconds": 0.182
+      }
+    },
+    "vertex_connectivity": 3,
+    "edge_connectivity": 3,
+    "origin": "legacy/lift3_cap_runs/m1_s7301.edge",
+    "not_counterexample_reason": "Contains C32."
+  },
+  {
+    "path": "data/graphs/n183_uncapped_c32_296418.edge",
+    "sha256": "90046e3129635664293061148f2dd5f98e941233d435c64062b074da953ce13e",
+    "vertices": 183,
+    "edges": 273,
+    "degree_histogram": {
+      "2": 3,
+      "3": 180
+    },
+    "connected": true,
+    "fresh_exact_cycle_counts": {
+      "4": 0,
+      "8": 0,
+      "16": 0,
+      "32": 296418
+    },
+    "fresh_count_status": {
+      "4": {
+        "status": "EXACT",
+        "stdout": "n=183 L=4 count=0",
+        "stderr": "",
+        "seconds": 0.002
+      },
+      "8": {
+        "status": "EXACT",
+        "stdout": "n=183 L=8 count=0",
+        "stderr": "",
+        "seconds": 0.002
+      },
+      "16": {
+        "status": "EXACT",
+        "stdout": "n=183 L=16 count=0",
+        "stderr": "",
+        "seconds": 0.002
+      },
+      "32": {
+        "status": "EXACT",
+        "stdout": "n=183 L=32 count=296418",
+        "stderr": "",
+        "seconds": 0.101
+      }
+    },
+    "vertex_connectivity": 2,
+    "edge_connectivity": 2,
+    "origin": "legacy/work2/uncapped183.edge",
+    "not_counterexample_reason": "Minimum degree is2; some boundary examples also contain forbidden cycles."
+  },
+  {
+    "path": "data/graphs/n184_c32_492309.edge",
+    "sha256": "51cbd6c6574c19497ed7f11ada7a27b2b577142f3d608d648c67e4b42410511b",
+    "vertices": 184,
+    "edges": 276,
+    "degree_histogram": {
+      "3": 184
+    },
+    "connected": true,
+    "fresh_exact_cycle_counts": {
+      "4": 0,
+      "8": 0,
+      "16": 0,
+      "32": 492309
+    },
+    "fresh_count_status": {
+      "4": {
+        "status": "EXACT",
+        "stdout": "n=184 L=4 count=0",
+        "stderr": "",
+        "seconds": 0.002
+      },
+      "8": {
+        "status": "EXACT",
+        "stdout": "n=184 L=8 count=0",
+        "stderr": "",
+        "seconds": 0.002
+      },
+      "16": {
+        "status": "EXACT",
+        "stdout": "n=184 L=16 count=0",
+        "stderr": "",
+        "seconds": 0.002
+      },
+      "32": {
+        "status": "EXACT",
+        "stdout": "n=184 L=32 count=492309",
+        "stderr": "",
+        "seconds": 0.136
+      }
+    },
+    "vertex_connectivity": 3,
+    "edge_connectivity": 3,
+    "origin": "legacy/lift3_runs/s2002.edge",
+    "not_counterexample_reason": "Contains C32."
+  },
+  {
+    "path": "data/graphs/n186_c32_279630.edge",
+    "sha256": "569c4ef43b4739e1ed3c2571880e70c9c171f0a2f56d1a8d057fc79d02fffc81",
+    "vertices": 186,
+    "edges": 279,
+    "degree_histogram": {
+      "3": 186
+    },
+    "connected": true,
+    "fresh_exact_cycle_counts": {
+      "4": 0,
+      "8": 0,
+      "16": 0,
+      "32": 279630
+    },
+    "fresh_count_status": {
+      "4": {
+        "status": "EXACT",
+        "stdout": "n=186 L=4 count=0",
+        "stderr": "",
+        "seconds": 0.002
+      },
+      "8": {
+        "status": "EXACT",
+        "stdout": "n=186 L=8 count=0",
+        "stderr": "",
+        "seconds": 0.002
+      },
+      "16": {
+        "status": "EXACT",
+        "stdout": "n=186 L=16 count=0",
+        "stderr": "",
+        "seconds": 0.002
+      },
+      "32": {
+        "status": "EXACT",
+        "stdout": "n=186 L=32 count=279630",
+        "stderr": "",
+        "seconds": 0.119
+      }
+    },
+    "vertex_connectivity": 3,
+    "edge_connectivity": 3,
+    "origin": "legacy/eg_186_c4c8c16free_c32_279630.edge",
+    "not_counterexample_reason": "Contains C32."
+  },
+  {
+    "path": "data/graphs/n186_c32_476415.edge",
+    "sha256": "9f46f216bf5ee606fd63f822c9635658dbb3d43907afa31467f1b9ed64ce7f4c",
+    "vertices": 186,
+    "edges": 279,
+    "degree_histogram": {
+      "3": 186
+    },
+    "connected": true,
+    "fresh_exact_cycle_counts": {
+      "4": 0,
+      "8": 0,
+      "16": 0,
+      "32": 476415
+    },
+    "fresh_count_status": {
+      "4": {
+        "status": "EXACT",
+        "stdout": "n=186 L=4 count=0",
+        "stderr": "",
+        "seconds": 0.002
+      },
+      "8": {
+        "status": "EXACT",
+        "stdout": "n=186 L=8 count=0",
+        "stderr": "",
+        "seconds": 0.001
+      },
+      "16": {
+        "status": "EXACT",
+        "stdout": "n=186 L=16 count=0",
+        "stderr": "",
+        "seconds": 0.002
+      },
+      "32": {
+        "status": "EXACT",
+        "stdout": "n=186 L=32 count=476415",
+        "stderr": "",
+        "seconds": 0.144
+      }
+    },
+    "vertex_connectivity": 3,
+    "edge_connectivity": 3,
+    "origin": "legacy/lift3_trianglecap_186.edge",
+    "not_counterexample_reason": "Contains C32."
+  },
+  {
+    "path": "data/graphs/n190_c32_178077.edge",
+    "sha256": "1083e61a82aa17f96ff1288ffebb5ce691f613c422b88cb14781eeb995978997",
+    "vertices": 190,
+    "edges": 285,
+    "degree_histogram": {
+      "3": 190
+    },
+    "connected": true,
+    "fresh_exact_cycle_counts": {
+      "4": 0,
+      "8": 0,
+      "16": 0,
+      "32": 178077
+    },
+    "fresh_count_status": {
+      "4": {
+        "status": "EXACT",
+        "stdout": "n=190 L=4 count=0",
+        "stderr": "",
+        "seconds": 0.002
+      },
+      "8": {
+        "status": "EXACT",
+        "stdout": "n=190 L=8 count=0",
+        "stderr": "",
+        "seconds": 0.002
+      },
+      "16": {
+        "status": "EXACT",
+        "stdout": "n=190 L=16 count=0",
+        "stderr": "",
+        "seconds": 0.002
+      },
+      "32": {
+        "status": "EXACT",
+        "stdout": "n=190 L=32 count=178077",
+        "stderr": "",
+        "seconds": 0.108
+      }
+    },
+    "vertex_connectivity": 3,
+    "edge_connectivity": 3,
+    "origin": "experiments/01-gadget-compression/data/eg190_178077.edge",
+    "not_counterexample_reason": "Contains C32."
+  },
+  {
+    "path": "data/graphs/n190_c32_216246.edge",
+    "sha256": "60a04c2d2ccfdc652545f978cdb29e5e15bd085d64e49d97182a3eb68ac6769b",
+    "vertices": 190,
+    "edges": 285,
+    "degree_histogram": {
+      "3": 190
+    },
+    "connected": true,
+    "fresh_exact_cycle_counts": {
+      "4": 0,
+      "8": 0,
+      "16": 0,
+      "32": 216246
+    },
+    "fresh_count_status": {
+      "4": {
+        "status": "EXACT",
+        "stdout": "n=190 L=4 count=0",
+        "stderr": "",
+        "seconds": 0.003
+      },
+      "8": {
+        "status": "EXACT",
+        "stdout": "n=190 L=8 count=0",
+        "stderr": "",
+        "seconds": 0.002
+      },
+      "16": {
+        "status": "EXACT",
+        "stdout": "n=190 L=16 count=0",
+        "stderr": "",
+        "seconds": 0.002
+      },
+      "32": {
+        "status": "EXACT",
+        "stdout": "n=190 L=32 count=216246",
+        "stderr": "",
+        "seconds": 0.103
+      }
+    },
+    "vertex_connectivity": 3,
+    "edge_connectivity": 3,
+    "origin": "reconstructed_surgeries.json; byte-identical to experiments/01-gadget-compression/data/input_216246.edge",
+    "not_counterexample_reason": "Contains C32."
+  },
+  {
+    "path": "data/graphs/n190_c32_216367.edge",
+    "sha256": "df605fed4fa48f640c3eabaceae262320087500ee8eda16ee6b13347119bcbd6",
+    "vertices": 190,
+    "edges": 285,
+    "degree_histogram": {
+      "3": 190
+    },
+    "connected": true,
+    "fresh_exact_cycle_counts": {
+      "4": 0,
+      "8": 0,
+      "16": 0,
+      "32": 216367
+    },
+    "fresh_count_status": {
+      "4": {
+        "status": "EXACT",
+        "stdout": "n=190 L=4 count=0",
+        "stderr": "",
+        "seconds": 0.002
+      },
+      "8": {
+        "status": "EXACT",
+        "stdout": "n=190 L=8 count=0",
+        "stderr": "",
+        "seconds": 0.002
+      },
+      "16": {
+        "status": "EXACT",
+        "stdout": "n=190 L=16 count=0",
+        "stderr": "",
+        "seconds": 0.006
+      },
+      "32": {
+        "status": "EXACT",
+        "stdout": "n=190 L=32 count=216367",
+        "stderr": "",
+        "seconds": 0.099
+      }
+    },
+    "vertex_connectivity": 3,
+    "edge_connectivity": 3,
+    "origin": "provenance/reconstructed_surgeries.json",
+    "not_counterexample_reason": "Contains C32."
+  },
+  {
+    "path": "data/graphs/n190_c32_216687.edge",
+    "sha256": "982e7d9a077883014e572f958d42d1c6b6b4575752272e0b7067470e2db0bffc",
+    "vertices": 190,
+    "edges": 285,
+    "degree_histogram": {
+      "3": 190
+    },
+    "connected": true,
+    "fresh_exact_cycle_counts": {
+      "4": 0,
+      "8": 0,
+      "16": 0,
+      "32": 216687
+    },
+    "fresh_count_status": {
+      "4": {
+        "status": "EXACT",
+        "stdout": "n=190 L=4 count=0",
+        "stderr": "",
+        "seconds": 0.003
+      },
+      "8": {
+        "status": "EXACT",
+        "stdout": "n=190 L=8 count=0",
+        "stderr": "",
+        "seconds": 0.003
+      },
+      "16": {
+        "status": "EXACT",
+        "stdout": "n=190 L=16 count=0",
+        "stderr": "",
+        "seconds": 0.002
+      },
+      "32": {
+        "status": "EXACT",
+        "stdout": "n=190 L=32 count=216687",
+        "stderr": "",
+        "seconds": 0.101
+      }
+    },
+    "vertex_connectivity": 3,
+    "edge_connectivity": 3,
+    "origin": "provenance/reconstructed_surgeries.json",
+    "not_counterexample_reason": "Contains C32."
+  },
+  {
+    "path": "data/graphs/n190_c32_219531.edge",
+    "sha256": "ade5bdd32900b5042ced188869c6706d77208f649c06914cbd214e5b96224926",
+    "vertices": 190,
+    "edges": 285,
+    "degree_histogram": {
+      "3": 190
+    },
+    "connected": true,
+    "fresh_exact_cycle_counts": {
+      "4": 0,
+      "8": 0,
+      "16": 0,
+      "32": 219531
+    },
+    "fresh_count_status": {
+      "4": {
+        "status": "EXACT",
+        "stdout": "n=190 L=4 count=0",
+        "stderr": "",
+        "seconds": 0.002
+      },
+      "8": {
+        "status": "EXACT",
+        "stdout": "n=190 L=8 count=0",
+        "stderr": "",
+        "seconds": 0.002
+      },
+      "16": {
+        "status": "EXACT",
+        "stdout": "n=190 L=16 count=0",
+        "stderr": "",
+        "seconds": 0.002
+      },
+      "32": {
+        "status": "EXACT",
+        "stdout": "n=190 L=32 count=219531",
+        "stderr": "",
+        "seconds": 0.1
+      }
+    },
+    "vertex_connectivity": 3,
+    "edge_connectivity": 3,
+    "origin": "legacy/replay/edge_counts_219531.tsv",
+    "not_counterexample_reason": "Contains C32."
+  },
+  {
+    "path": "data/graphs/n190_c32_220225.edge",
+    "sha256": "8c7790e97974031475e14036b6870175495d8daa8bbf25e123562ef07127d86a",
+    "vertices": 190,
+    "edges": 285,
+    "degree_histogram": {
+      "3": 190
+    },
+    "connected": true,
+    "fresh_exact_cycle_counts": {
+      "4": 0,
+      "8": 0,
+      "16": 0,
+      "32": 220225
+    },
+    "fresh_count_status": {
+      "4": {
+        "status": "EXACT",
+        "stdout": "n=190 L=4 count=0",
+        "stderr": "",
+        "seconds": 0.002
+      },
+      "8": {
+        "status": "EXACT",
+        "stdout": "n=190 L=8 count=0",
+        "stderr": "",
+        "seconds": 0.002
+      },
+      "16": {
+        "status": "EXACT",
+        "stdout": "n=190 L=16 count=0",
+        "stderr": "",
+        "seconds": 0.002
+      },
+      "32": {
+        "status": "EXACT",
+        "stdout": "n=190 L=32 count=220225",
+        "stderr": "",
+        "seconds": 0.102
+      }
+    },
+    "vertex_connectivity": 3,
+    "edge_connectivity": 3,
+    "origin": "provenance/n190_220225_serialized_in_chat.base64",
+    "not_counterexample_reason": "Contains C32."
+  },
+  {
+    "path": "data/graphs/n190_c32_446643.edge",
+    "sha256": "9716657650bb2eee22c67e989d4c9876c5ad6ae0020ebfff6c0625b51aeb1b2e",
+    "vertices": 190,
+    "edges": 285,
+    "degree_histogram": {
+      "3": 190
+    },
+    "connected": true,
+    "fresh_exact_cycle_counts": {
+      "4": 0,
+      "8": 0,
+      "16": 0,
+      "32": 446643
+    },
+    "fresh_count_status": {
+      "4": {
+        "status": "EXACT",
+        "stdout": "n=190 L=4 count=0",
+        "stderr": "",
+        "seconds": 0.003
+      },
+      "8": {
+        "status": "EXACT",
+        "stdout": "n=190 L=8 count=0",
+        "stderr": "",
+        "seconds": 0.002
+      },
+      "16": {
+        "status": "EXACT",
+        "stdout": "n=190 L=16 count=0",
+        "stderr": "",
+        "seconds": 0.002
+      },
+      "32": {
+        "status": "EXACT",
+        "stdout": "n=190 L=32 count=446643",
+        "stderr": "",
+        "seconds": 0.137
+      }
+    },
+    "vertex_connectivity": 3,
+    "edge_connectivity": 3,
+    "origin": "legacy/work2/caps8/cap_g1_v0_p234.edge",
+    "not_counterexample_reason": "Contains C32."
+  },
+  {
+    "path": "data/graphs/n190_checkpoint_claimed303008.edge",
+    "sha256": "b2ead5cd66ef1812c75c089e6d415b215c7cb5d309eccebff7d3aa3ebe739062",
+    "vertices": 190,
+    "edges": 285,
+    "degree_histogram": {
+      "3": 190
+    },
+    "connected": true,
+    "fresh_exact_cycle_counts": {
+      "4": 0,
+      "8": 0,
+      "16": 0,
+      "32": 303008
+    },
+    "fresh_count_status": {
+      "4": {
+        "status": "EXACT",
+        "stdout": "n=190 L=4 count=0",
+        "stderr": "",
+        "seconds": 0.002
+      },
+      "8": {
+        "status": "EXACT",
+        "stdout": "n=190 L=8 count=0",
+        "stderr": "",
+        "seconds": 0.003
+      },
+      "16": {
+        "status": "EXACT",
+        "stdout": "n=190 L=16 count=0",
+        "stderr": "",
+        "seconds": 0.002
+      },
+      "32": {
+        "status": "EXACT",
+        "stdout": "n=190 L=32 count=303008",
+        "stderr": "",
+        "seconds": 0.122
+      }
+    },
+    "vertex_connectivity": 3,
+    "edge_connectivity": 3,
+    "origin": "legacy/work2/descent/step_004.edge",
+    "not_counterexample_reason": "Contains C32."
+  },
+  {
+    "path": "data/graphs/n26550_c4c8c16c32c64free.edge",
+    "sha256": "9279d54bb246b2368f895fc5e144342c3da336955745bb802023ff7424538064",
+    "vertices": 26550,
+    "edges": 39825,
+    "degree_histogram": {
+      "3": 26550
+    },
+    "connected": true,
+    "fresh_exact_cycle_counts": {},
+    "fresh_count_status": {},
+    "note": "Direct enumerator is capped at n<=10000; absence through 64 is checked by the separate exact structural verifier, not this direct count run.",
+    "origin": "experiments/02-gap64/data/eg26550.edge",
+    "structurally_certified_counts": {
+      "4": 0,
+      "8": 0,
+      "16": 0,
+      "32": 0,
+      "64": 0,
+      "65": 630
+    },
+    "explicit_forbidden_witness": "experiments/02-gap64/certificates/C128_witness.json",
+    "not_counterexample_reason": "Explicit C128."
+  },
+  {
+    "path": "data/graphs/n294_c16_122.edge",
+    "sha256": "631443e0990536e14364a63d4fd9668f2be78e8e1be896896c799a2e49c9139b",
+    "vertices": 294,
+    "edges": 441,
+    "degree_histogram": {
+      "3": 294
+    },
+    "connected": true,
+    "fresh_exact_cycle_counts": {
+      "4": 0,
+      "8": 0,
+      "16": 122
+    },
+    "fresh_count_status": {
+      "4": {
+        "status": "EXACT",
+        "stdout": "n=294 L=4 count=0",
+        "stderr": "",
+        "seconds": 0.002
+      },
+      "8": {
+        "status": "EXACT",
+        "stdout": "n=294 L=8 count=0",
+        "stderr": "",
+        "seconds": 0.002
+      },
+      "16": {
+        "status": "EXACT",
+        "stdout": "n=294 L=16 count=122",
+        "stderr": "",
+        "seconds": 0.002
+      }
+    },
+    "vertex_connectivity": 3,
+    "edge_connectivity": 3,
+    "origin": "experiments/02-gap64/experiments/theta294_C16_122.edge",
+    "not_counterexample_reason": "Contains122 C16s."
+  },
+  {
+    "path": "data/graphs/n370_c4c8c16c32free.edge",
+    "sha256": "75ff07f380e9c5e2f410228254c10d4446a1159aced1612230daee5c572d3859",
+    "vertices": 370,
+    "edges": 555,
+    "degree_histogram": {
+      "3": 370
+    },
+    "connected": true,
+    "fresh_exact_cycle_counts": {
+      "4": 0,
+      "8": 0,
+      "16": 0,
+      "32": 0,
+      "33": 43
+    },
+    "fresh_count_status": {
+      "4": {
+        "status": "EXACT",
+        "stdout": "n=370 L=4 count=0",
+        "stderr": "",
+        "seconds": 0.003
+      },
+      "8": {
+        "status": "EXACT",
+        "stdout": "n=370 L=8 count=0",
+        "stderr": "",
+        "seconds": 0.002
+      },
+      "16": {
+        "status": "EXACT",
+        "stdout": "n=370 L=16 count=0",
+        "stderr": "",
+        "seconds": 0.002
+      },
+      "32": {
+        "status": "EXACT",
+        "stdout": "n=370 L=32 count=0",
+        "stderr": "",
+        "seconds": 0.049
+      },
+      "33": {
+        "status": "EXACT",
+        "stdout": "n=370 L=33 count=43",
+        "stderr": "",
+        "seconds": 0.051
+      }
+    },
+    "vertex_connectivity": 3,
+    "edge_connectivity": 3,
+    "origin": "experiments/01-gadget-compression/data/eg370_no_C32.edge",
+    "explicit_forbidden_witness": "experiments/01-gadget-compression/certificates/C64_witness.json",
+    "not_counterexample_reason": "Explicit C64."
+  }
+]

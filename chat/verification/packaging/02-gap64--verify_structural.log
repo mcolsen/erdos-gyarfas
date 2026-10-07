@@ -1,0 +1,4 @@
+Triangle grammar closure: 540 cases; {(1, 1, 1): 27, (1, 3, 3): 27, (1, 7, 7): 3}
+All 12 turn-charge identities verified.
+Theta routing certificate: only A-D joins; no disjoint A-D split; all odd double-edge necklaces excluded.
+PASS

@@ -1,0 +1,16 @@
+{
+  "status": "UNKNOWN_SOLVER",
+  "rounds": 395,
+  "clauses": 2425,
+  "seconds": 37.498985052108765,
+  "best_c16_upper_cap": 64,
+  "cycle_clauses_by_length": {
+    "4": 39,
+    "8": 1563,
+    "16": 1344
+  },
+  "oracle_nodes": 251934,
+  "universal_topology_clauses": 149,
+  "decision_diagram_nodes": 19616,
+  "orbit_instances": 14508
+}

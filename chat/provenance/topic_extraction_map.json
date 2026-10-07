@@ -1,0 +1,249 @@
+[
+  {
+    "id": "05",
+    "path": "docs/05-exact-gadget-compression.md",
+    "title": "Exact three-terminal compression and cycle polynomials",
+    "source_note": "provenance/eg_gadget_research_note.md",
+    "source_sections": [
+      1,
+      2,
+      3
+    ],
+    "experiment": "experiments/01-gadget-compression",
+    "scope": "Finite templates, exact decomposition proof, and retained count reconstruction."
+  },
+  {
+    "id": "06",
+    "path": "docs/06-order370-cycle-gap.md",
+    "title": "The 370-vertex graph: no C4, C8, C16, or C32",
+    "source_note": "provenance/eg_gadget_research_note.md",
+    "source_sections": [
+      4
+    ],
+    "experiment": "experiments/01-gadget-compression",
+    "scope": "Retained complete cubic graph; not a counterexample because it contains C64."
+  },
+  {
+    "id": "07",
+    "path": "docs/07-fixed-core-parity-obstructions.md",
+    "title": "Parity certificates for the two 34-vertex cores",
+    "source_note": "provenance/eg_gadget_research_note.md",
+    "source_sections": [
+      5
+    ],
+    "experiment": "experiments/01-gadget-compression",
+    "scope": "Excludes specified cores only, with the T3/T7/T15 templates and arbitrary orientations."
+  },
+  {
+    "id": "08",
+    "path": "docs/08-order26550-cycle-gap.md",
+    "title": "The 26,550-vertex graph: no C4, C8, C16, C32, or C64",
+    "source_note": "provenance/eg_gap64_research_note.md",
+    "source_sections": [
+      2
+    ],
+    "experiment": "experiments/02-gap64",
+    "scope": "Retained complete cubic graph; exact structural certificate and explicit C128 witness."
+  },
+  {
+    "id": "09",
+    "path": "docs/09-turn-charge-inequality.md",
+    "title": "Turn-charge inequality on bridgeless cubic cores",
+    "source_note": "provenance/eg_gap64_research_note.md",
+    "source_sections": [
+      1,
+      3
+    ],
+    "experiment": "experiments/02-gap64",
+    "scope": "The initial bridgeless theorem. The bridge exception is closed for all-T7/T15 in note 26; mixed cells are not generally excluded."
+  },
+  {
+    "id": "10",
+    "path": "docs/10-triangle-grammar-closure.md",
+    "title": "Closure of the safe triangle-composition grammar",
+    "source_note": "provenance/eg_gap64_research_note.md",
+    "source_sections": [
+      4
+    ],
+    "experiment": "experiments/02-gap64",
+    "scope": "Complete finite grammar calculation plus induction; not a classification of arbitrary cells."
+  },
+  {
+    "id": "11",
+    "path": "docs/11-theta233-dilation.md",
+    "title": "Theta(2,3,3): joint routing and fourfold dilation",
+    "source_note": "provenance/eg_gap64_research_note.md",
+    "source_sections": [
+      5
+    ],
+    "experiment": "experiments/02-gap64",
+    "scope": "Uniform-assembly reduction and scoped unsuccessful experiment. Do not confuse with the theta(2,3,4) phase cell."
+  },
+  {
+    "id": "12",
+    "path": "docs/12-exhaustive181-cell-census.md",
+    "title": "The exhaustive 181-cell interface census",
+    "source_note": "provenance/eg_interface_phase_research_note.md",
+    "source_sections": [
+      1,
+      2
+    ],
+    "experiment": "experiments/03-phase-interfaces",
+    "scope": "Exhaustive only in the stated degree, terminal-count and biconnectivity domain. Its seven unresolved entries are historical filter outcomes; the separate 554 catalogue is not the same domain."
+  },
+  {
+    "id": "13",
+    "path": "docs/13-theta234-phase-hole.md",
+    "title": "Theta(2,3,4): an exact-one phase hole at every dyadic scale",
+    "source_note": "provenance/eg_interface_phase_research_note.md",
+    "source_sections": [
+      3
+    ],
+    "experiment": "experiments/03-phase-interfaces",
+    "scope": "Exact selected-cycle theorem and power-free boundary graphs. Those graphs still have degree-two vertices."
+  },
+  {
+    "id": "14",
+    "path": "docs/14-strips-and-four-link-gluings.md",
+    "title": "Disjoint-routing strip closure and four-link gluing",
+    "source_note": "provenance/eg_interface_phase_research_note.md",
+    "source_sections": [
+      4,
+      5
+    ],
+    "experiment": "experiments/03-phase-interfaces",
+    "scope": "Finite complete exclusions in explicit libraries and architectures; includes one 18-vertex six-terminal cell."
+  },
+  {
+    "id": "15",
+    "path": "docs/15-phase-boundary-repair.md",
+    "title": "Edge, hub and cap exclusions for the phase boundary graphs",
+    "source_note": "provenance/eg_interface_phase_research_note.md",
+    "source_sections": [
+      6
+    ],
+    "experiment": "experiments/03-phase-interfaces",
+    "scope": "Fixed-seed completion exclusions with path witnesses. Not exclusions of arbitrary rewiring or networks of new vertices."
+  },
+  {
+    "id": "16",
+    "path": "docs/16-constructed554-cell-catalogue.md",
+    "title": "The constructed 554-cell catalogue",
+    "source_note": "provenance/eg_interface_filters_note.md",
+    "source_sections": [
+      1
+    ],
+    "experiment": "experiments/04-interface-filters",
+    "scope": "Specified construction catalogue, not every cell through an order bound."
+  },
+  {
+    "id": "17",
+    "path": "docs/17-block-and-pentagon-transmission.md",
+    "title": "Four-turn transmission certificates and the pentagon exception",
+    "source_note": "provenance/eg_interface_filters_note.md",
+    "source_sections": [
+      2
+    ],
+    "experiment": "experiments/04-interface-filters",
+    "scope": "Historical count: 467 transmitters, 86 escapes, one unknown. Note 23 resolves that unknown, giving 468/86/0."
+  },
+  {
+    "id": "18",
+    "path": "docs/18-composition-escape-examples.md",
+    "title": "Parity, odd-divisor and narrow-band composition escapes",
+    "source_note": "provenance/eg_interface_filters_note.md",
+    "source_sections": [
+      3
+    ],
+    "experiment": "experiments/04-interface-filters",
+    "scope": "Local cycle-family escapes, not complete minimum-degree-three graphs."
+  },
+  {
+    "id": "19",
+    "path": "docs/19-frozen-backbone-completions.md",
+    "title": "Certified limits on three frozen-backbone completions",
+    "source_note": "provenance/eg_interface_filters_note.md",
+    "source_sections": [
+      4
+    ],
+    "experiment": "experiments/04-interface-filters",
+    "scope": "Fixed perfect-matching completion domains only; witness-derived independent-set upper bounds."
+  },
+  {
+    "id": "20",
+    "path": "docs/20-exact-interface-oracle.md",
+    "title": "An exact repeated-visit interface oracle",
+    "source_note": "provenance/eg_interface_filters_note.md",
+    "source_sections": [
+      5
+    ],
+    "experiment": "experiments/04-interface-filters",
+    "scope": "Exact disjoint-routing and single-circuit semantics for the stated necklace templates."
+  },
+  {
+    "id": "21",
+    "path": "docs/21-mixed-cell-synthesis-motifs.md",
+    "title": "Mixed-cell synthesis: 47,647 rejected assemblies",
+    "source_note": "provenance/eg_interface_filters_note.md",
+    "source_sections": [
+      6
+    ],
+    "experiment": "experiments/04-interface-filters",
+    "scope": "Retained rejection witnesses and complete specified motifs; labelled counts need not be nonisomorphic."
+  },
+  {
+    "id": "22",
+    "path": "docs/22-heptagon-phase-classification.md",
+    "title": "Heptagon turn-count profiles at every dyadic scale",
+    "source_note": "provenance/eg_joint_research_note.md",
+    "source_sections": [
+      2
+    ],
+    "experiment": "experiments/05-joint-synthesis",
+    "scope": "All-orders proof with 11,304 finite regression cases; selected simple quotient cycles only."
+  },
+  {
+    "id": "23",
+    "path": "docs/23-u11-variable-transmission.md",
+    "title": "U11 variable-factor transmission and final catalogue classification",
+    "source_note": "provenance/eg_joint_research_note.md",
+    "source_sections": [
+      3
+    ],
+    "experiment": "experiments/05-joint-synthesis",
+    "scope": "Final classification of the 554 supplied objects: 468 uniform transmitters and 86 explicit local escapes. U11 is not the earlier G11."
+  },
+  {
+    "id": "24",
+    "path": "docs/24-joint-cell-and-wiring-search.md",
+    "title": "Joint cell-choice and wiring synthesis",
+    "source_note": "provenance/eg_joint_research_note.md",
+    "source_sections": [
+      4
+    ],
+    "experiment": "experiments/05-joint-synthesis",
+    "scope": "Working search and verified learned rules; every retained search verdict is UNKNOWN or UNKNOWN_SOLVER."
+  },
+  {
+    "id": "25",
+    "path": "docs/25-guarded-terminal-identification.md",
+    "title": "Noncubic candidates and collision-guarded identification",
+    "source_note": "provenance/eg_joint_research_note.md",
+    "source_sections": [
+      5
+    ],
+    "experiment": "experiments/05-joint-synthesis",
+    "scope": "6,087 degree-complete rejected candidates; 67,272 guarded witness clauses; no exhausted synthesis domain."
+  },
+  {
+    "id": "26",
+    "path": "docs/26-bridge-extension.md",
+    "title": "All-T7/T15 obstruction for cubic cores with bridges",
+    "source_note": "provenance/eg_joint_research_note.md",
+    "source_sections": [
+      6
+    ],
+    "experiment": "experiments/05-joint-synthesis",
+    "scope": "Extends the specific-template obstruction to all connected simple cubic cores. Includes the local necessary mixed-cell inequality."
+  }
+]

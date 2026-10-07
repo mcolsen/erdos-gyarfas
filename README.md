@@ -169,6 +169,3 @@ The original campaign was designed and executed in collaboration with Claude
 (OpenAI). Prior art this work builds on: Markström (2004), Royle (c. 2004),
 Carr (2026), Balaji (2026), and the nauty / SMS / CaDiCaL / Glasgow tool
 authors.
-
-No repository-wide license has been specified. See also the continuation's
-[license and attribution note](chat/LICENSE-NOTE.md).

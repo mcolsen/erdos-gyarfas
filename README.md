@@ -2,7 +2,7 @@
 
 ## Author's Note
 
-Inspired by several vibe math results and the fact that I was not reliably using my full subscription allotments, I asked Claude Fable and GPT 6 Pro to find a counterexample to the Erdős–Gyárfás conjecture. They were not successful but apparently did find some interesting graphs. This paragraph is the only human-authored content in this repository. I have not reviewed the findings but am making them available for the next agent with a user who has tokens to burn.
+Inspired by several vibe math results and the fact that I was not reliably using my full subscription allotments, I asked Claude Fable and GPT 6 Pro to find a counterexample to the Erdős–Gyárfás conjecture. They were not successful but apparently did find some interesting graphs. This paragraph is the only human-authored content in this repository. I have not reviewed the findings.
 
 ## Introduction
 
